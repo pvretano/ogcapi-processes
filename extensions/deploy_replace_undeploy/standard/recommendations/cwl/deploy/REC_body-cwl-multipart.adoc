@@ -1,0 +1,58 @@
+[[rec_deploy-replace-undeploy_deploy_body_cwl_multipart]]
+[recommendation]
+====
+[%metadata]
+identifier:: /rec/deploy-replace-undeploy/deploy-body-cwl-multipart
+inherit:: <<rfc2387,RFC 2387 (The MIME Multipart/Related Content-type)>>
+
+[.component,class=part]
+--
+If a process requires the deployment of multiple <<rc_cwl,CWL>> documents to represent its execution unit
+(e.g.: a `class: Workflow` that depends on multiple other `steps` referring to separate `class: CommandLineTool` documents),
+a server MAY support a HTTP POST operation using `multipart/related` media-type (https://datatracker.ietf.org/doc/html/rfc2387[RFC 2387])
+as `Content-Type` header.
+--
+
+[.component,class=part]
+--
+The media-type of the <<rc_cwl,CWL>> parts in the multipart body SHOULD be specified by their
+respective `Content-Type` header using `application/cwl`, `application/cwl+json` or `application/cwl+yaml`
+media-types in accordance to their respective encoding.
+--
+
+[.component,class=part]
+--
+The <<rc_cwl,CWL>> parts of the multipart body SHOULD employ the `start`
+parameter (https://datatracker.ietf.org/doc/html/rfc2387#section-3.2[RFC 2387, section 3.2])
+to indicate the part consisting of the main <<rc_cwl,CWL>> `Workflow` documents that invokes other `steps`.
+Otherwise, the server MAY assume that the first part of the multipart body is the main one, or MAY use other
+means of identification such as <<req_cwl_w-param,/req/cwl/w-param>>.
+--
+
+[.component,class=part]
+--
+If the main <<rc_cwl,CWL>> part employs `run` references to other `steps` referring to documents by file names
+(e.g.: `run: tools/tool-1.cwl`), the server
+SHOULD consider supporting a `Content-Disposition: attachment; filename="tools/tool-1.cwl"` header for each part
+to resolve the corresponding execution units that compose the process.
+--
+
+[.component,class=part]
+--
+If the main <<rc_cwl,CWL>> part employs `run` references to other `steps` referring to documents by unique IDs
+(e.g.: `run: "cid:tool-2@bundle.example"` or `run: "cid:urn:uuid:550e8400-e29b-41d4-a716-446655440002"`), the server
+SHOULD consider supporting a `Content-ID: <CID-ref>` header for each part to resolve the
+corresponding execution units that compose the process.
+--
+
+[.component,class=part]
+--
+If the main <<rc_cwl,CWL>> part employs `run` references to other `steps` referring to external document URIs
+(e.g.: `run: "https://repo.example.org/cwl/tools/tool-4.cwl"`), the server
+SHOULD consider supporting a `Content-Location` header that indicate the location of the original
+part content for traceability.
+The part MAY omit the literal content to let the server retrieve it from the indicated location,
+or include it explicitly to provide an alternative local copy of the content.
+--
+
+====

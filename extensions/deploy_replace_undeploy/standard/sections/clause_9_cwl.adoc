@@ -7,18 +7,18 @@ include::../requirements/requirements_class_cwl.adoc[]
 
 A server that implements the CWL Requirement Class SHALL support the use of CWL encoding when interacting with the Processes API Part 2 deploy-replace-undeploy extension endpoint.
 
-=== OGC Application Package
+=== OGC Application Package as CWL
 
 ==== executionUnit property
 
-In case the OGC Application Package encoding is used, the following Requirement applies.
+In case the <<rc_ogcapppkg,OGC Application Package>> encoding is used to provide a <<rc_cwl,CWL>> definition, the following Requirement applies.
 
 include::../requirements/cwl/REQ_execution-unit.adoc[]
 
-Below is an example of a deploy body request using a CWL-encoded execution unit by reference.
+Below is an example of a deploy body request using a <<rc_cwl,CWL>>-encoded execution unit by reference.
 
-[[cwl_ogcapppkg_example1]]
-[source%unnumbered]
+[[cwl_ogcapppkg_example_reference]]
+[source%unnumbered,json]
 ----
 {
   "executionUnit": {
@@ -28,15 +28,45 @@ Below is an example of a deploy body request using a CWL-encoded execution unit 
 }
 ----
 
-Below is an example of a deploy body request using a CWL-encoded execution unit by value. The value is not included for readability and results from converting from the original CWL format (YAML) into JSON.
+Below is an example of a deploy body request using a <<rc_cwl,CWL>>-encoded execution unit by value.
+The <<rc_cwl,CWL>> value is not included entirely for readability. It is to be noted that the JSON object is directly
+included in the same JSON structure as the execution unit parameter.
+Therefore, the <<rc_cwl,CWL>> additional encoding (i.e.: JSON) does not need to be explicitly indicated in this case
+because it can be inferred from the body structure itself.
 
-[[cwl_ogcapppkg_example2]]
-[source%unnumbered]
+[[cwl_ogcapppkg_example_object]]
+[source%unnumbered,json]
 ----
 {
   "executionUnit": {
-    "value": { ... },
+    "value": { "cwlVersion": "v1.2", "class": "CommandLineTool", ... },
+    "mediaType": "application/cwl"
+  }
+}
+----
+
+Below are other examples of deploy body request using a <<rc_cwl,CWL>>-encoded execution unit by value.
+However, the <<rc_cwl,CWL>> content is included as an embedded string within the execution unit parameter.
+In these cases, the <<rc_cwl,CWL>> additional encoding (i.e.: JSON or YAML) needs to be provided to disambiguate the content structure.
+
+[[cwl_ogcapppkg_example_string_json]]
+[source%unnumbered,json]
+----
+{
+  "executionUnit": {
+    "value": "{ \"cwlVersion\": \"v1.2\", \"class\": \"CommandLineTool\", ... }",
     "mediaType": "application/cwl+json"
+  }
+}
+----
+
+[[cwl_ogcapppkg_example_string_yaml]]
+[source%unnumbered,json]
+----
+{
+  "executionUnit": {
+    "value": "cwlVersion: 'v1.2'\nclass: CommandLineTool\n...",
+    "mediaType": "application/cwl+yaml"
   }
 }
 ----
@@ -45,11 +75,17 @@ Below is an example of a deploy body request using a CWL-encoded execution unit 
 
 ==== CWL body
 
+In case a <<rc_cwl,CWL>> document is provided directly as body content of the request, the following Requirement applies.
+
 include::../requirements/cwl/deploy/REQ_body.adoc[]
+
+==== Multipart CWL body
+
+include::../recommendations/cwl/deploy/REC_body-cwl-multipart.adoc[]
 
 ==== w parameter
 
-When encoded in CWL, processes are identified as instances of the workflow class.
+When encoded in <<rc_cwl,CWL>>, processes are identified as instances of the workflow class.
 
 include::../requirements/cwl/deploy/REQ_w-param.adoc[]
 
@@ -61,10 +97,18 @@ include::../requirements/cwl/deploy/REQ_exception-workflow-not-found.adoc[]
 
 ==== CWL body
 
+In case a <<rc_cwl,CWL>> document is provided directly as body content of the request, the following Requirement applies.
+
 include::../requirements/cwl/replace/REQ_body.adoc[]
+
+==== Multipart CWL body
+
+include::../recommendations/cwl/replace/REC_body-cwl-multipart.adoc[]
 
 === Formal description
 
 ==== CWL content
 
 include::../requirements/cwl/package/REQ_response-body.adoc[]
+
+include::../recommendations/deploy-replace-undeploy/package/REC_response-cwl.adoc[]

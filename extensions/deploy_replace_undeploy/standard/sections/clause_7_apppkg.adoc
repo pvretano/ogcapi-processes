@@ -41,7 +41,7 @@ include::../requirements/ogcapppkg/REQ_process-description.adoc[]
 [[executionUnit]]
 ==== executionUnit property
 
-If the schema defined for the executionUnit property of an OGC Application Package remains open, it can be restricted in other Requirements.
+If the schema defined for the `executionUnit` property of an OGC Application Package remains open, it can be restricted in other Requirements.
 
 include::../recommendations/ogcapppkg/REC_execution-unit-docker.adoc[]
 
