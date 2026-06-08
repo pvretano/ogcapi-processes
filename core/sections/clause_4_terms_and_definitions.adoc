@@ -54,7 +54,7 @@ EXAMPLE: https://docs.ogc.org/is/20-057/20-057.html[_OGC API - Tiles - Part 1: C
 [[def-deployment]]
 ==== OGC API deployment
 
-An implementation of an https://www.ogc.org/standards/[OGC API Standard] that is accessible to users and other system typically through the Web.
+An implementation of an https://www.ogc.org/standards/[OGC API Standard] that is accessible to users and other system(s) typically through the Web.
 
 ==== process
 

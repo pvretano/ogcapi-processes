@@ -12,7 +12,7 @@ identifier:: /req/core/process-execute-success-async-outputs-empty
 
 [.component,class=part]
 --
-The server SHALL asynchoronously execute the process but SHALL not produce any retrievable outputs.
+The server SHALL asynchronously execute the process but SHALL not produce any retrievable outputs.
 --
 
 [.component,class=part]

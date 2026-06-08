@@ -25,7 +25,7 @@ style: form
 explode: false
 ----
 
-where the token `{inputID}` represented the identifier of the input and the token {numeric-type} is the value `number` or `integer`.
+where the token `{inputID}` represents the identifier of the input and the token {numeric-type} is the value `number` or `integer`.
 --
 
 ====

@@ -5,7 +5,7 @@
 [%metadata]
 identifier:: /conf/core/job-results-failed
 target:: /req/core/job-results-failed
-test-purpose:: Validate that the job results for a failed job complies with the require structure and contents.
+test-purpose:: Validate that the job results for a failed job complies with the required structure and contents.
 test-method::
 +
 --

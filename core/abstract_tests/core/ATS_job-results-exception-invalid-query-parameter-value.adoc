@@ -9,7 +9,7 @@ test-purpose:: Validate that the job results retrieved using an invalid job iden
 test-method::
 +
 --
-1. Issue an HTTP GET request to the URL '/jobs/{jobID}/results' using a parameters (e.g. `outputs`) with an invalid parameter value.
+1. Issue an HTTP GET request to the URL '/jobs/{jobID}/results' using a parameter (e.g. `outputs`) with an invalid parameter value.
 
 2. Verify that the server responds with an HTTP status code 400.
 

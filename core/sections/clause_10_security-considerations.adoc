@@ -59,8 +59,8 @@ Most of the operations defined in the OGC API - Processes Standard use the safe 
 |===
 |Resource |Path |HTTP method | Information delivered
 
-|Landing page |`/` |GET| General information about the service, links to API endpoints
-|Conformance classes |`/conformance` |GET| List of conformance classes
+|Landing page |`/` |GET |General information about the service, links to API endpoints
+|Conformance classes |`/conformance` |GET |List of conformance classes
 |Process list |`/processes` |GET | Process identifiers, links to process descriptions
 |Process description |`/processes/{processID}` |GET | Information about a process, e.g. inputs/outputs
 |Job status info |`/jobs/{jobID}` |GET | Status info, links to results or exceptions
@@ -113,7 +113,6 @@ The _execute_ operation uses HTTP POST to create new processing jobs (process ex
 The new job IDs that are returned in the status info document should be created in a non-guessable way, for example by using UUIDs. This will prevent random attempts to get job status information, results / exceptions or even cancel jobs / delete job artifacts.
 
 include::../recommendations/job-list/REC_access-control-job-list.adoc[]
-
 
 [[sec_cons_dismiss]]
 === Dismiss operation

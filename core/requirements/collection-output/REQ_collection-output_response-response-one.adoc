@@ -13,7 +13,7 @@ identifier:: /req/collection-output/response-response-one
 
 [.component,class=part]
 --
-The server SHALL response with an HTTP status code of https://datatracker.ietf.org/doc/html/rfc7231#section-6.4.4[303].
+The server SHALL respond with an HTTP status code of https://datatracker.ietf.org/doc/html/rfc7231#section-6.4.4[303].
 --
 
 [.component,class=part]

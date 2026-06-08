@@ -14,7 +14,12 @@ All requirements, permission, recommendations, and conformance tests that appear
 
 === APIs
 
-This Standard is primarily concerned with defining the components of a Processes API.  That is an API that enables the execution of computing processes, the retrieval of metadata describing their purpose and functionality and the retrieval of the results of the process execution.  The reader, however, should be cogniscant of the fact that an implementation of the Processes API as defined in this Standard may be embeded as part of a broader API.  For example, a single server may implement the https://docs.ogc.org/is/17-069r4/17-069r4.html#_references[Features] and Processes APIs and so common elements (such as the landing page) will contain components of both standards.  When the term "API" is encountered in this Standard, the term is in most cases referring only to the components of a Processes API even though an implementation of the Processes API may be part of a broader API implementation.
+This Standard is primarily concerned with defining the components of a Processes API.  That is an API that when implemented enables the execution of computing processes, the retrieval of metadata describing their purpose and functionality and the retrieval of the results of the process execution.  The reader, however, should be cognizant of the fact that an implementation of the Processes API as defined in this Standard may be embedded as part of a broader deployed API.  For example, a single server may implement the https://docs.ogc.org/is/17-069r4/17-069r4.html#_references[Features] and Processes APIs.  In this case, common elements (such as the landing page) will contain components of both standards.
+
+[NOTE]
+====
+When the term "API" is encountered in this Standard, the term is in most cases referring only to the components of a Processes API even though an implementation of the Processes API may be part of a broader API implementation.
+====
 
 === Schemas
 
