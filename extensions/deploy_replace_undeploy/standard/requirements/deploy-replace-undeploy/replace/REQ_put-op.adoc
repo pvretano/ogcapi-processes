@@ -11,7 +11,7 @@ For every dynamically deployed processes (path `/processes/{processID}`), the se
 
 [.component,class=part]
 --
-The parameter `processID` is each `id` property in the process collection response (JSONPath: `$.processes[*].id`).
+The parameter `{processID}` is each `id` property in the process collection response (JSONPath: `$.processes[*].id`).
 --
 
 ====
