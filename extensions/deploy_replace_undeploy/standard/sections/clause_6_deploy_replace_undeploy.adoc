@@ -90,6 +90,16 @@ allOf:
         default: true
 ----
 
+[[processes-resources]]
+=== Resources endpoint
+
+include::../requirements/deploy-replace-undeploy/resources/REQ_resources-endpoint.adoc[]
+
+[[processes-resource]]
+=== Resource endpoint
+
+include::../requirements/deploy-replace-undeploy/resources/REQ_resource-endpoint.adoc[]
+
 [[deploy]]
 === Deploying a new process to the API
 
@@ -97,7 +107,6 @@ allOf:
 
 The following diagram illustrates the sequence diagram for deploying
 a new process to the API:
-
 
 .Process deployment example.
 ====

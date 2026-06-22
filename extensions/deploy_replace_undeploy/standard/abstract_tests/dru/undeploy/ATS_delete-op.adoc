@@ -15,7 +15,7 @@ test-method::
 
 3. Issue an HTTP DELETE request for each path.
 
-3. Validate that the response header does not contain `405 Method not allowed`.
+4. Validate that the response header does not contain `405 Method not allowed`.
 --
 ====
 

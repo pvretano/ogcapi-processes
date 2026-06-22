@@ -1,93 +1,91 @@
-type: object
-description: |-
-   Resource containing executable or runtime information for executing the
-   process.
-required:
-  - type
-properties:
-  type:
-    description:
-      Type of execution unit.
-    type: string
-    anyOf:
-      - enum:
-          - docker
-          - oci
-      - type: string
-  image:
-    description: |-
-      Container image reference for the execution unit.
-    type: string
-  deployment:
-    description: Deployment information for the execution unit.
-    type: string
-    anyOf:
-      - enum:
-          - local
-          - remote
-          - hpc
-          - cloud
-      - type: string
-  config:
+oneOf:
+  - description: |-
+      The execution unit is a DOCKER or OCI container.
     type: object
-    description: |-
-      Hardware requirements and configuration properties for executing the
-      process.
+    required:
+      - type
+      - value
     properties:
-      cpuMin:
-        description: |-
-          Minimum number of CPUs required to run the process (unit is CPU core).
-        type: number
-        minimum: 1
-      cpuMax:
-        description: |-
-          Maximum number of CPU dedicated to the process (unit is CPU core)
-        type: number
-      memoryMin:
-        description: |-
-          Minimum RAM memory required to run the application (unit is GB)
-        type: number
-      memoryMax:
-        description: |-
-          Maximum RAM memory dedicated to the application (unit is GB)
-        type: number
-      storageTempMin:
-        description: |-
-          Minimum required temporary storage size (unit is GB)
-        type: number
-      storageOutputsMin:
-        description: |-
-          Minimum required output storage size (unit is GB)
-        type: number
-      jobTimeout:
-        description: |-
-          Timeout delay for a job execution (in seconds)
-        type: number
-    additionalProperties: true
-  bindings:
-    type: object
-    properties:
-      inputBindings:
-        additionalProperties:
-          $ref: "inputBinding.yaml"
-      outputBindings:
-        additionalProperties:
-          $ref: "outputBinding.yaml"
-additionalProperties: true
-example:
-  type: docker
-  image: mydocker/ndvi:latest
-  bindings:
-    inputBindings:
-      inputImage:
-        prefix: "inputsImages="
-        inputSeparator: ","
-    outputBindings:
-      outputImage:
-        glob: $("/outputs/ndvi_" + inputs.inputImage.basename)
-  deployment: local
-  config:
-    cpuMin: 2
-    cpuMax: 5
-    memoryMin: 1
-    memoryMax: 3
+      type:
+        enum:
+        - docker
+        - oci
+      value:
+        $ref: executionUnitContainer.yaml
+    additionalProperties: false
+  - allOf:
+      - description: |-
+          The execution unit is a CWL script.  The CWL script can be directly
+          encoded into the execution unit as a JSON object OR the CWL script 
+          can be referenced via a "link" OR the CWL script can be encoded as
+          a string and included as the content of the "value" property.  In
+          this case, the "mediaType" property must also be specified indicating
+          the RFC 2046 media type of the content of the "value" property.
+        type: object
+        required: type
+        properties:
+          type:
+            enum:
+            - cwl
+      - oneOf:
+        - type: object
+          required: value
+          properties:
+            value:
+              - $ref: "https://raw.githubusercontent.com/common-workflow-language/cwl-v1.2/main/json-schema/cwl.yaml"
+          additionalProperties: false
+        - type: object
+          required:
+            - value
+            - mediaType
+          properties:
+            mediaType:
+              description: |-
+                Indicates the RFC 2046 media type of the content of "value".
+              type: string
+            value:
+              description: |-
+                The content of the "value" string is a CWL script encoded as a
+                JSON or YAML string.
+              type: string
+        - type: object
+          required: link
+          properties:
+            link:
+              - $ref: "link.yaml"
+          additionalProperties: false
+  - allOf:
+      - description: |-
+          The execution unit is something other than a container or CWL script.
+          This Standard allows other types of execution units (e.g. Python) but
+          does not provide details about their use.  The specific details of the
+          execution unit can be included inline or referenced via a link.  For
+          inline inclusion, the details of the execution unit may be embedded 
+          as a JSON object or encoded as the content of a string.  In this later
+          case of a string, the "mediaType" property may be used to indicated
+          the RFC 2046 media type of the contents of the "value" string.
+        type: object
+        required: type
+        properties:
+          type:
+            type: string
+      - oneOf:
+        - type: object
+          required: value
+          properties:
+            value:
+              type: object
+          additionalProperties: true
+        - type: object
+          required: value
+          properties:
+            mediaType:
+              type: string
+            value:
+              type: string
+        - type: object
+          required: link
+          properties:
+            link:
+              - $ref: "link.yaml"
+          additionalProperties: false

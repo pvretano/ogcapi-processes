@@ -7,7 +7,10 @@ identifier:: https://www.opengis.net/spec/ogcapi-processes-2/1.0/req/deploy-repl
 obligation:: requirement
 subject:: Web API
 inherit:: <<OAProc-1,OGC API - Processes - Part 1: Core, Conformance Class 'core'>>
+inherit:: <<OAFeat-4,OGC API - Features - Part 4: Create, Replace, Update and Delete, Conformance Class "Create/Replace/Delete">>
 inherit:: <<rfc2616,RFC 2616 (HTTP/1.1)>>
+requirement:: /req/deploy-replace-undeploy/resources-endpoint
+requirement:: /req/deploy-replace-undeploy/resource-endpoint
 requirement:: /req/deploy-replace-undeploy/deploy-body
 requirement:: /req/deploy-replace-undeploy/deploy-content-type
 requirement:: /req/deploy-replace-undeploy/deploy-post-op

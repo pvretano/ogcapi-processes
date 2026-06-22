@@ -22,8 +22,11 @@ Below is an example of a deploy body request using a <<rc_cwl,CWL>>-encoded exec
 ----
 {
   "executionUnit": {
-    "href": "https://raw.githubusercontent.com/EOEPCA/app-snuggs/main/app-package.cwl",
-    "type": "application/cwl"
+    "type": "cwl",
+    "link": {
+      "href": "https://raw.githubusercontent.com/EOEPCA/app-snuggs/main/app-package.cwl",
+      "type": "application/cwl"
+    }
   }
 }
 ----
@@ -39,8 +42,9 @@ because it can be inferred from the body structure itself.
 ----
 {
   "executionUnit": {
-    "value": { "cwlVersion": "v1.2", "class": "CommandLineTool", ... },
-    "mediaType": "application/cwl"
+    "type": "cwl",
+    "mediaType": "application/cwl",
+    "value": { "cwlVersion": "v1.2", "class": "CommandLineTool", ... }
   }
 }
 ----
@@ -54,8 +58,9 @@ In these cases, the <<rc_cwl,CWL>> additional encoding (i.e.: JSON or YAML) need
 ----
 {
   "executionUnit": {
-    "value": "{ \"cwlVersion\": \"v1.2\", \"class\": \"CommandLineTool\", ... }",
-    "mediaType": "application/cwl+json"
+    "type": "cwl",
+    "mediaType": "application/cwl+json",
+    "value": "{ \"cwlVersion\": \"v1.2\", \"class\": \"CommandLineTool\", ... }"
   }
 }
 ----
@@ -65,8 +70,9 @@ In these cases, the <<rc_cwl,CWL>> additional encoding (i.e.: JSON or YAML) need
 ----
 {
   "executionUnit": {
-    "value": "cwlVersion: 'v1.2'\nclass: CommandLineTool\n...",
-    "mediaType": "application/cwl+yaml"
+    "type": "cwl",
+    "mediaType": "application/cwl+yaml",
+    "value": "cwlVersion: 'v1.2'\nclass: CommandLineTool\n..."
   }
 }
 ----
