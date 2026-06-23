@@ -6,7 +6,7 @@ identifier:: /rec/deploy-replace-undeploy/deploy-body-ogcapppkg
 
 [.component,class=part]
 --
-If a process can be represented for the intended use as an <<rc_ogcapppkg,OGC Application Package>>, implementations SHOULD consider supporting the <<rc_ogcapppkg,OGC Application Package>> encoding for describing the process to be added to the API.
+If a process can be represented for the intended use as an <<rc_ogcapppkg,OGC Application Package>>, implementations SHOULD consider supporting the <<rc_ogcapppkg,OGC Application Package Conformance Class>> for describing the process to be added to the API.
 --
 
 ====

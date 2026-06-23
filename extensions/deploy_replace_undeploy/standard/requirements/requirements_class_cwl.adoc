@@ -10,11 +10,11 @@ inherit:: <<OAProc-1,OGC API - Processes - Part 1: Core>>
 inherit:: <<rc_deploy-replace-undeploy,https://www.opengis.net/spec/ogcapi-processes-2/1.0/req/deploy-replace-undeploy>>
 inherit:: <<rc_ogcapppkg,https://www.opengis.net/spec/ogcapi-processes-2/1.0/req/ogcapppkg>>
 inherit:: Common Workflow Language <<Common_Workflow_Language>>
-requirement:: /req/cwl/body
-requirement:: /req/cwl/deploy-body
-requirement:: /req/cwl/deploy-exception-workflow-not-found
+
+requirement:: /req/cwl/execution-unit-by-ref
 requirement:: /req/cwl/deploy-w-param
-requirement:: /req/cwl/execution-unit
-requirement:: /req/cwl/package-response-body
-requirement:: /req/cwl/replace-body
+requirement:: /req/cwl/media-type-request
+requirement:: /req/cwl/deploy-exception-workflow-not-found
+requirement:: /req/cwl/body
+requirement:: /req/cwl/execution-unit-by-val
 ====

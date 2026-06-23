@@ -16,8 +16,12 @@ A response with HTTP status code `403` MAY include a `Location` header with the 
 
 [.component,class=part]
 --
-The content of that response shall be based upon the OpenAPI
-3.0 schema https://raw.githubusercontent.com/opengeospatial/ogcapi-processes/master/core/openapi/schemas/exception.yaml[exception.yaml].
+The content of that response SHALL validate against the following OpenAPI schema fragment:
+
+[source,yaml]
+----
+include::../../../../../../openapi/schemas/common-core/exception.yaml[]
+----
 --
 
 [.component,class=part]

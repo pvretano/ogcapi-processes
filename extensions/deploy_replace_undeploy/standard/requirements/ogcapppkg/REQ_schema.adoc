@@ -6,7 +6,14 @@ identifier:: /req/ogcapppkg/schema
 
 [.component,class=part]
 --
-An <<rc_ogcapppkg,OGC Application Package>> document SHALL be based upon the OpenAPI schema https://schemas.opengis.net/ogcapi/processes/part2/1.0/openapi/schemas/ogcapppkg.yaml[ogcapppkg.yaml].
+The schema of an <<rc_ogcapppkg,OGC Application Package>> document SHALL be defined by the following OpenAPI schema fragment:
+
+ogcapppkg.yaml
+[source,yaml]
+----
+include::../../../../../openapi/schemas/processes-dru/ogcapppkg.yaml[]
+----
+
 --
 
 ====

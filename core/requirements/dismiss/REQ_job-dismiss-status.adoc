@@ -16,4 +16,7 @@ If the job is currently in the `successful`, `failed` or `dismissed` state, then
 
 ====
 
-NOTE: This standard makes no statements regarding the disposition of artifacts created by a job once a job has been removed and is no longer accessible via the Processes API.
+NOTE: This standard makes no statements regarding the disposition strategy of artifacts created by a job once a job has been
+dismissed and is no longer accessible via the Processes API. Responses to dismissed jobs and their artifacts can
+optionally employ the corresponding <<per_core_job-results-exception_job-gone,/per/core/job-results-exception-job-gone>>
+and <<per_core_process-exception_job-gone,/per/core/process-exception-job-gone>> approaches to indicate their unavailability.
