@@ -338,6 +338,7 @@ Additional metadata might be included in the response body as well at the discre
 [source,json]
 ----
 {
+    "entity": "https://example.com/ogcapi/processes/HelloWorld",
     "inputs": {
         "message": "Hello World!"
     },
