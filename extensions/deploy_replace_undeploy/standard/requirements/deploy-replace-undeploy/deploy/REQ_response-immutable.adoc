@@ -16,7 +16,7 @@ A response with HTTP status code `403` MAY include a `Location` header with the 
 
 [.component,class=part]
 --
-The content of that response SHALL validate against the following OpenAPI 3.0 schema fragment:
+The content of that response SHALL validate against the following OpenAPI schema fragment:
 
 [source,yaml]
 ----
