@@ -6,7 +6,8 @@ oneOf:
       - description: |-
           The execute unit is a container image.
         type: object
-        required: type
+        required:
+          - type
         properties:
           type:
             type: string
@@ -18,7 +19,8 @@ oneOf:
       - description: |-
           The execution unit is CWL script.
         type: object
-        required: mediaType
+        required:
+          - mediaType
         properties:
           mediaType:
             type: string
@@ -33,7 +35,8 @@ oneOf:
           In this case a community-defined or custom token may be used
           with the "type" property.
         type: object
-        required: type
+        required:
+          - type
         properties:
           type:
             type: string
