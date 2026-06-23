@@ -34,7 +34,7 @@ NOTE: The `processDescription` property is optional and if it is not included in
 [[executionUnit-property]]
 === executionUnit property
 
-The execution unit, specified using the `executionUnit` property, describes the code that a processing server must execute whenever a mutable process is invoked.
+The execution unit, specified using the <<executionUnit-property,`executionUnit` property>>, describes the code that a processing server must execute whenever a mutable process is invoked.
 
 include::../requirements/ogcapppkg/REQ_executionUnit-schema.adoc[]
 
