@@ -15,7 +15,7 @@ test-method::
 
 3. Issue an HTTP PUT request with an unsupported media type, i.e. `text/plain`, on each path.
 
-4. Validate the response using <<ats_dru_deploy_unsupported-content-type,/conf/dru/deploy/unsupported-content-type>>
+4. Validate the response using <<ats_dru_deploy_unsupported-media-type,/conf/dru/deploy/unsupported-media-type>>
 --
 ====
 

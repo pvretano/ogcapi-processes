@@ -9,7 +9,7 @@ classification:: Target Type:Web API
 conformance-test:: /conf/dru/static-indicator
 conformance-test:: /conf/dru/deploy-post-op
 conformance-test:: /conf/dru/deploy-content-type
-conformance-test:: /conf/dru/deploy-unsupported-content-type
+conformance-test:: /conf/dru/deploy-unsupported-media-type
 conformance-test:: /conf/dru/replace-put-op
 conformance-test:: /conf/dru/replace-content-type
 conformance-test:: /conf/dru/undeploy-delete-op
@@ -25,7 +25,7 @@ include::dru/ATS_static-indicator.adoc[]
 
 include::dru/deploy/ATS_post-op.adoc[]
 include::dru/deploy/ATS_content-type.adoc[]
-include::dru/deploy/ATS_unsupported-content-type.adoc[]
+include::dru/deploy/ATS_unsupported-media-type.adoc[]
 
 ==== Replace operation
 

@@ -26,7 +26,7 @@ The value of the `status` parameter SHALL indicate the state of the job at the t
 
 [.component,class=part]
 --
-The value of the `processingEntityType` parameter SHALL indicate the type of server that created the job (e.g. "ogc-api-processes", "openeo", "ogc-api-coverages", etc.).
+The value of the `processingEntityType` parameter SHALL indicate the type of server that created the job (e.g. `ogc-api-processes`, `openeo`, `ogc-api-coverages`, etc.).
 --
 
 [.component,class=part]

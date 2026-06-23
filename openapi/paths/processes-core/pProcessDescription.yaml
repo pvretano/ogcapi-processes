@@ -10,6 +10,7 @@ get:
    operationId: getProcessDescription
    tags:
      - Processes
+     - Core
    parameters:
      - $ref: "../../parameters/processes-core/processID-path.yaml"
    responses:

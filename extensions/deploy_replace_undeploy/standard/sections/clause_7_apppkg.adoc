@@ -34,7 +34,7 @@ NOTE: The `processDescription` property is optional and if it is not included in
 [[executionUnit-property]]
 === executionUnit property
 
-The execution unit, specified using the `executionUnit` property, describes the code that a processing server must execute whenever a mutable process is invoked.  
+The execution unit, specified using the <<executionUnit-property,`executionUnit` property>>, describes the code that a processing server must execute whenever a mutable process is invoked.
 
 include::../requirements/ogcapppkg/REQ_executionUnit-schema.adoc[]
 
@@ -54,29 +54,31 @@ The following example illustrates an execution unit where the executable code is
 [[docker_ogcapppkg_example]]
 [source%unnumbered,json]
 ----
-"executionUnit": {
-  "type": "docker",
-  "value": {
-    "image": "mydocker/ndvi:latest",
-    "bindings": {
-      "inputBindings": {
-        "inputImage": {
-          "prefix": "inputsImages=",
-          "inputSeparator": ","
+{
+  "executionUnit": {
+    "type": "docker",
+    "value": {
+      "image": "mydocker/ndvi:latest",
+      "bindings": {
+        "inputBindings": {
+          "inputImage": {
+            "prefix": "inputsImages=",
+            "inputSeparator": ","
+          }
+        },
+        "outputBindings": {
+          "outputImage": {
+            "glob": "$(\"/outputs/ndvi_\" + inputs.inputImage.basename)"
+          }
         }
       },
-      "outputBindings": {
-        "outputImage": {
-          "glob": "$(\"/outputs/ndvi_\" + inputs.inputImage.basename)"
-        }
+      "deployment": "local",
+      "config": {
+        "cpuMin": 2,
+        "cpuMax": 5,
+        "memoryMin": 1,
+        "memoryMax": 3
       }
-    },
-    "deployment": "local",
-    "config": {
-      "cpuMin": 2,
-      "cpuMax": 5,
-      "memoryMin": 1,
-      "memoryMax": 3
     }
   }
 }

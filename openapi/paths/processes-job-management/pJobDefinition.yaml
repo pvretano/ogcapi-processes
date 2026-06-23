@@ -9,7 +9,7 @@ get:
      - $ref: "../../parameters/processes-core/jobID.yaml"
    responses:
      200:
-       $ref: "../../schemas/processes-workflows/execute-workflows.yaml"
+       $ref: "../../responses/processes-job-management/rJobDefinition.yaml"
      404:
        $ref: "../../responses/common-core/rNotFound.yaml"
      500:

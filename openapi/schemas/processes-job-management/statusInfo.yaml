@@ -2,14 +2,15 @@ type: object
 required:
    - id
    - status
-   - type
+   - processingEntityType
 properties:
    id:
       type: string
    process:
       type: string
-   type:
-      $ref: "processes-type.yaml"
+      format: uri-reference
+   processingEntityType:
+      $ref: "../processes-core/processingEntityType.yaml"
    status:
       $ref: "statusCode.yaml"
    message:
@@ -36,3 +37,4 @@ properties:
       type: array
       items:
          $ref: "../common-core/link.yaml"
+additionalProperties: true

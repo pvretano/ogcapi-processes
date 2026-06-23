@@ -13,7 +13,7 @@ test-method::
 
 2. Issue an HTTP POST request associated with an unsupported media type, i.e. `text/plain`.
 
-3. Validate the response using <<ats_dru_deploy_unsupported-content-type,/conf/dru/deploy/unsupported-content-type>>
+3. Validate the response using <<ats_dru_deploy_unsupported-media-type,/conf/dru/deploy/unsupported-media-type>>
 --
 ====
 

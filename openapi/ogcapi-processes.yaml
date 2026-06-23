@@ -14,6 +14,9 @@ servers:
   - description: |-
        Example Server 1 (GNOSIS, supporting Part 1: Core /Sync and Part 3: Workflows)
     url: https://maps.gnosis.earth/ogcapi
+  - description: |-
+       Example Server 2 (CRIM Hirondelle, supporting Parts 1, 2, 3, 4)
+    url: https://hirondelle.crim.ca/ogcapi/processes
 paths:
    # OGC API - Common - Part 1: Core
    /:
@@ -51,19 +54,37 @@ paths:
 
    # OGC API - Processes - Part 1: Core (Jobs, required for ASync execution)
    /jobs:
-      $ref: 'paths/processes-core/pJobsList.yaml'
+      # OGC API - Processes - Part 1: Core
+      get:
+         $ref: 'paths/processes-core/operations/oProcessList.yaml'
+      # OGC API - Processes - Part 4: Job Management
+      post:
+         $ref: 'paths/processes-job-management/operations/oJobCreate.yaml'
 
    /jobs/{jobID}:
       $ref: 'paths/processes-core/pJob.yaml'
 
    /jobs/{jobID}/results:
-      $ref: 'paths/processes-core/pJobResults.yaml'
+      # OGC API - Processes - Part 1: Core
+      get:
+         $ref: 'paths/processes-core/operations/oJobResults.yaml'
+      # OGC API - Processes - Part 4: Job Management
+      post:
+         $ref: 'paths/processes-job-management/operations/oJobResultsStart.yaml'
 
    /jobs/{jobID}/results/{outputID}:
       $ref: 'paths/processes-core/pResultOutput.yaml'
 
    /jobs/{jobID}/results/{outputID}/{N}:
       $ref: 'paths/processes-core/pResultOutputValue.yaml'
+
+   # OGC API - Processes - Part 4: Job Management
+
+   /jobs/{jobID}/definition:
+      $ref: 'paths/processes-job-management/pJobDefinition.yaml'
+
+   /jobs/{jobID}/prov:
+      $ref: 'paths/processes-job-management/pJobProvenance.yaml'
 
 components:
    schemas:
@@ -543,3 +564,19 @@ components:
          $ref: 'responses/processes-dru/rDuplicateProcess.yaml'
       ImmutableProcess:
          $ref: 'responses/processes-dru/rImmutableProcess.yaml'
+
+      # OGC API - Common - Part 3: Workflows and Chaining
+      # (pre injected elsewhere as applicable - no extra endpoints)
+
+      # OGC API - Common - Part 4: Job Management
+      JobProvenance:
+         $ref: 'responses/processes-job-management/rJobProvenance.yaml'
+      JobDefinition:
+         $ref: 'responses/processes-job-management/rJobDefinition.yaml'
+
+# patches for above 'JobProvenance', which includes a JSON-LD schema context that doesn't resolve definitions otherwise
+definitions:
+  Context:
+     $ref: 'https://www.w3.org/submissions/prov-jsonld/schema.json#definitions/Context'
+  ArrayOfValues:
+     $ref: 'https://www.w3.org/submissions/prov-jsonld/schema.json#definitions/ArrayOfValues'

@@ -23,7 +23,7 @@ assumed to return all outputs from the top-level process with the same names as 
 
 A minimal but adequate process description for the resulting process can automatically be generated
 based on the context where the `"$input"` and `"$output"` objects appear within the workflow definition, allowing
-to describe all inputs to the process and its outputs by inferrence from the source process descriptions
+to describe all inputs to the process and its outputs by inference from the source process descriptions
 and/or input data.
 
 The workflow definition could either directly be the payload of the `POST` request to `/processes` (using `Content-Type: application/json`),

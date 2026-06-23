@@ -12,28 +12,20 @@ allOf:
         type: string
         format: uri
       processingEntityType:
-        description: |-
-          The type of entity that created the job and is doing the processing.
-          This includes all the data access apis listed in "apis.yaml" plus
-          the processing APIs of OGC API Processes and OpenEO.
-        anyOf:
-          - $ref: "apis.yaml"
-          - type: string
-            enum:
-              - ogc-api-processes
-              - openeo
+        allOf:
+          - description: |-
+              The type of entity that created the job and is doing the processing.
+              This includes all the data access apis listed in "apis.yaml" plus
+              the processing APIs of OGC API Processes and OpenEO.
+          - $ref: "processingEntityType.yaml"
       profileEntityType:
-        description: |-
-          The type of entity requesting this status information.  This may
-          be differernt than the processing entity.  For example, the
-          processing entity may be OGC API Processes but the status
-          information is requested via the OpenEO API.
-        anyOf:
-          - $ref: "apis.yaml"
-          - type: string
-            enum:
-              - ogc-api-processes
-              - openeo
+        allOf:
+          - description: |-
+              The type of entity requesting this status information.  This may
+              be differernt than the processing entity.  For example, the
+              processing entity may be OGC API Processes but the status
+              information is requested via the OpenEO API.
+          - $ref: "processingEntityType.yaml"
       request:
         oneOf:
           - type: string

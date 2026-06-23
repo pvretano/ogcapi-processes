@@ -4,7 +4,7 @@
 [[cwl-overview]]
 === Sending CWL embedded in an OGC Application Package
 
-==== Overview 
+==== Overview
 
 include::../requirements/requirements_class_cwl.adoc[]
 
@@ -12,7 +12,7 @@ This clause defines the requirements for sending a CWL document to the process d
 
 Embedding the CWL document in the <<clause_ogcapppkg,OGC Application Package>> means that the `processDescription` property does not need to be specified because the description of the process can be inferred from the CWL value specified in the `executionUnit`.
 
-==== Specifying the CWL by reference 
+==== Specifying the CWL by reference
 
 include::../requirements/cwl/REQ_execution-unit-by-ref.adoc[]
 
