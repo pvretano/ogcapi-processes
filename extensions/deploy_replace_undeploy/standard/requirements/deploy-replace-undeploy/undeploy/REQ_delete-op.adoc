@@ -16,7 +16,7 @@ The parameter `processID` is each `id` property in the process collection respon
 
 [.component,class=part]
 --
-The HTTP DELETE operation SHALL only be supported for dynamically deployed resources (i.e. those where the value of the <<req_deploy-replace-undeploy_static-indicator,`mutable`>> property set to `true`).
+The HTTP DELETE operation SHALL only be supported for dynamically deployed resources (i.e. those where the value of the <<req_deploy-replace-undeploy_static-indicator,`mutable`>> property is set to `true`).
 --
 
 ====

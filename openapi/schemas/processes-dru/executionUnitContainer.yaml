@@ -6,15 +6,16 @@ properties:
       Container image reference for the execution unit.
     type: string
   deployment:
-    description: Deployment information for the execution unit.
+    description: |-
+      Deployment information for the execution unit.
     type: string
     anyOf:
+      - type: string
       - enum:
           - local
           - remote
           - hpc
           - cloud
-      - type: string
   config:
     type: object
     description: |-
@@ -61,20 +62,3 @@ properties:
         additionalProperties:
           $ref: "outputBinding.yaml"
 additionalProperties: true
-example:
-  type: docker
-  image: mydocker/ndvi:latest
-  bindings:
-    inputBindings:
-      inputImage:
-        prefix: "inputsImages="
-        inputSeparator: ","
-    outputBindings:
-      outputImage:
-        glob: $("/outputs/ndvi_" + inputs.inputImage.basename)
-  deployment: local
-  config:
-    cpuMin: 2
-    cpuMax: 5
-    memoryMin: 1
-    memoryMax: 3
