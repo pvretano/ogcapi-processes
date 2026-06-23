@@ -7,12 +7,12 @@ operationId: getResult
 tags:
    - Jobs
 parameters:
-   - $ref: "../../parameters/processes-core/jobID.yaml"
-   - $ref: "../../parameters/processes-core/prefer-header-return.yaml"
+   - $ref: "../../../parameters/processes-core/jobID.yaml"
+   - $ref: "../../../parameters/processes-core/prefer-header-return.yaml"
 responses:
    200:
-      $ref: "../../responses/processes-core/rResults.yaml"
+      $ref: "../../../responses/processes-core/rResults.yaml"
    404:
-      $ref: "../../responses/common-core/rNotFound.yaml"
+      $ref: "../../../responses/common-core/rNotFound.yaml"
    500:
-      $ref: "../../responses/common-core/rServerError.yaml"
+      $ref: "../../../responses/common-core/rServerError.yaml"

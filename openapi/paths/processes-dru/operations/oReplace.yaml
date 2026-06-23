@@ -7,7 +7,7 @@ operationId: replace
 tags:
   - DRU
 parameters:
-  - $ref: "../../parameters/processes-core/processID-path.yaml"
+  - $ref: "../../../parameters/processes-core/processID-path.yaml"
 requestBody:
   description: |-
     An OGC Application Package used to deploy a new process.
@@ -15,35 +15,35 @@ requestBody:
   content:
     application/ogcapppkg+json:
       schema:
-        $ref: "../../schemas/processes-dru/ogcapppkg.yaml"
+        $ref: "../../../schemas/processes-dru/ogcapppkg.yaml"
     application/cwl:
       schema:
         #$ref: "https://w3id.org/cwl/v1.2/cwl-json-schema.yaml"
-        $ref: "../../schemas/cwl/cwl.yaml"
+        $ref: "../../../schemas/cwl/cwl.yaml"
     application/cwl+json:
       schema:
         #$ref: "https://w3id.org/cwl/v1.2/cwl-json-schema.yaml"
-        $ref: "../../schemas/cwl/cwl.yaml"
+        $ref: "../../../schemas/cwl/cwl.yaml"
     application/cwl+yaml:
       schema:
         #$ref: "https://w3id.org/cwl/v1.2/cwl-json-schema.yaml"
-        $ref: "../../schemas/cwl/cwl.yaml"
+        $ref: "../../../schemas/cwl/cwl.yaml"
 responses:
   200:
-    $ref: "../../responses/processes-dru/rProcessSummary.yaml"
+    $ref: "../../../responses/processes-dru/rProcessSummary.yaml"
   201:
-    $ref: "../../responses/processes-dru/rProcessSummary.yaml"
+    $ref: "../../../responses/processes-dru/rProcessSummary.yaml"
   202:
-    $ref: "../../responses/processes-dru/rProcessSummary.yaml"
+    $ref: "../../../responses/processes-dru/rProcessSummary.yaml"
   204:
-    $ref: "../../responses/processes-core/rEmpty.yaml"
+    $ref: "../../../responses/processes-core/rEmpty.yaml"
   400:
-    $ref: "../../responses/common-core/rException.yaml"
+    $ref: "../../../responses/common-core/rException.yaml"
   403:
-    $ref: "../../responses/processes-dru/rImmutableProcess.yaml"
+    $ref: "../../../responses/processes-dru/rImmutableProcess.yaml"
   404:
-    $ref: "../../responses/common-core/rNotFound.yaml"
+    $ref: "../../../responses/common-core/rNotFound.yaml"
   409:
-    $ref: "../../responses/processes-dru/rDuplicateProcess.yaml"
+    $ref: "../../../responses/processes-dru/rDuplicateProcess.yaml"
   500:
-    $ref: "../../responses/common-core/rServerError.yaml"
+    $ref: "../../../responses/common-core/rServerError.yaml"
