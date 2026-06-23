@@ -6,7 +6,7 @@ identifier:: /per/job-management/create-body
 
 [.component,class=part]
 --
-A server MAY support any encoding in the body of a HTTP POST operation.
+A server MAY support alternate encoding than JSON in the body of a HTTP POST operation.
 --
 
 ====

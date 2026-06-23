@@ -11,7 +11,7 @@ For every created jobs (path `/jobs/{jobID}`), the server SHALL support the HTTP
 
 [.component,class=part]
 --
-The parameter `jobID` is each `id` property in the jobs list response (JSONPath: `$.jobs[*].id`).
+The parameter `jobID` resolves to a valid job as per <<OAProc-1,OGC API - Processes - Part 1: Core, Conformance Class 'Core'>>.
 --
 
 ====

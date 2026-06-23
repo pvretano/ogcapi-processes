@@ -1,0 +1,8 @@
+description: Parametrization information of a submitted job.
+content:
+   application/json:
+      schema:
+         $ref: '../../schemas/processes-job-management/jobDefinition.yaml'
+   text/html:
+      schema:
+         type: string

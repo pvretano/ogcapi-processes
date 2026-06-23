@@ -6,7 +6,8 @@ identifier:: /req/openeo/schema
 
 [.component,class=part]
 --
-An `OpenEO Process Graph` document SHALL be based upon the OpenEO Process Graph JSON schema https://openeo.org/documentation/1.0/developers/api/assets/pg-schema.json.
+An `OpenEO Process Graph` document SHALL be based upon the OpenEO Process Graph JSON schema
+https://openeo.org/documentation/1.0/developers/api/assets/pg-schema.json[pg-schema.json].
 --
 
 ====

@@ -33,7 +33,7 @@ of the main <<rc_cwl,CWL>> `Workflow` documents that invokes other `steps`.
 --
 If the `start` parameter is not provided in the request `Content-Type` header, the <<rc_cwl,CWL>> part
 corresponding to the main `Workflow` document MAY include a part `Content-ID` header indicating a `#main`
-reference in accordance to <<https://www.commonwl.org/v1.2/CommandLineTool.html#Packed_documents,CWL Packed documents>>
+reference in accordance to link:https://www.commonwl.org/v1.2/CommandLineTool.html#Packed_documents[CWL Packed documents]
 specification to identify itself as the main part of the multipart body.
 --
 

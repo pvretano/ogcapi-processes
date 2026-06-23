@@ -174,7 +174,7 @@ Content-Profile: <https://www.opengis.net/def/profile/OGC/0/ogc-process-descript
 ----
 
 The following partial example illustrates how the main <<rc_cwl,CWL>> part can be represented by the `#main` identifier
-in accordance to the <<https://www.commonwl.org/v1.2/CommandLineTool.html#Packed_documents,CWL Packed documents>>
+in accordance to the link:https://www.commonwl.org/v1.2/CommandLineTool.html#Packed_documents[CWL Packed documents]
 representation, instead of using the multipart `start` parameter. In this case, the `Content-ID` header of the entire
 request (i.e.: `<workflow-main@example.com>`) indicates that the `{processID}` should be `workflow-main`, while the
 `Content-ID` within the part (i.e.: `<#main@example.com>`) indicates that this part is the main <<rc_cwl,CWL>> document.

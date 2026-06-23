@@ -9,6 +9,7 @@ iev/
 relaton/
 *.asciidoc.log.txt
 *.err.html
+*.xml.abort
 18-062.pdf
 18-062.html
 18-062.doc
@@ -35,6 +36,12 @@ extensions/workflows/**/21-009.doc
 extensions/workflows/**/21-009.err
 extensions/workflows/**/21-009.xml
 extensions/workflows/**/21-009.presentation.xml
+extensions/job_management/**/24-051.pdf
+extensions/job_management/**/24-051.html
+extensions/job_management/**/24-051.doc
+extensions/job_management/**/24-051.err
+extensions/job_management/**/24-051.xml
+extensions/job_management/**/24-051.presentation.xml
 node_modules
 package.json
 package-lock.json

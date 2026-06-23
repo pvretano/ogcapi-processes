@@ -1,0 +1,18 @@
+[[req_job-management_definition_response-body-default]]
+[requirement]
+====
+[%metadata]
+identifier:: /req/job-management/definition-response-body-default
+
+[.component,class=conditions]
+--
+. No content negotiation has been specified using either HTTP headers or other methods.
+--
+
+[.component,class=part]
+--
+A response with HTTP status code `200` SHALL include a body as JSON document that conforms to the schema
+https://github.com/opengeospatial/ogcapi-processes/blob/master/openapi/schemas/processes-job-management/jobDefinition.yaml[jobDefinition.yaml].
+--
+
+====

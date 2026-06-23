@@ -14,6 +14,9 @@ servers:
   - description: |-
        Example Server 1 (GNOSIS, supporting Part 1: Core /Sync and Part 3: Workflows)
     url: https://maps.gnosis.earth/ogcapi
+  - description: |-
+       Example Server 2 (CRIM Hirondelle, supporting Parts 1, 2, 3, 4)
+    url: https://hirondelle.crim.ca/ogcapi/processes
 paths:
    # OGC API - Common - Part 1: Core
    /:
@@ -57,13 +60,20 @@ paths:
       $ref: 'paths/processes-core/pJob.yaml'
 
    /jobs/{jobID}/results:
-      $ref: 'paths/processes-core/pJobResults.yaml'
+      get:
+         $ref: 'paths/processes-core/pJobResults.yaml'
+      post:
+         $ref: 'paths/processes-job-management/pJobResultsStart.yaml'
 
    /jobs/{jobID}/results/{outputID}:
       $ref: 'paths/processes-core/pResultOutput.yaml'
 
    /jobs/{jobID}/results/{outputID}/{N}:
       $ref: 'paths/processes-core/pResultOutputValue.yaml'
+
+   # OGC API - Processes - Part 4: Job Management
+   /jobs/{jobID}/definition:
+      $ref: 'paths/processes-job-management/pJobDefinition.yaml'
 
 components:
    schemas:
@@ -543,3 +553,10 @@ components:
          $ref: 'responses/processes-dru/rDuplicateProcess.yaml'
       ImmutableProcess:
          $ref: 'responses/processes-dru/rImmutableProcess.yaml'
+
+
+      # OGC API - Common - Part 3: Workflows and Chaining
+
+
+      # OGC API - Common - Part 4: Job Management
+

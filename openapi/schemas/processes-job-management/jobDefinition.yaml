@@ -1,0 +1,32 @@
+description: Definition of the parameters of a submitted job.
+type: object
+required:
+  - inputs
+  - outputs
+properties:
+  inputs:
+    description: Inputs values of the process submitted to the job.
+    type: object
+    additionalProperties:
+      $ref: "../processes-workflow/input-workflow.yaml"
+  outputs:
+    description: Selected process outputs and formats submitted to the job.
+    type: object
+    additionalProperties:
+      $ref: "../processes-workflow/output-workflow.yaml"
+  headers:
+    description: |-
+      HTTP headers included in the job submission request.
+      This can be used to provide relevant headers that impact the job execution, such as the `Prefer` header
+      that can indicate the desired execution mode (e.g., synchronous or asynchronous) or preferred return format.
+    $ref: "headers.yaml"
+  metadata:
+    description: Additional metadata associated to the job submission.
+    type: array
+    items:
+      $ref: "../processes-core/metadata.yaml"
+  links:
+    description: Link references to other resources related to the job.
+    type: array
+    items:
+      $ref: "../common-core/link.yaml"

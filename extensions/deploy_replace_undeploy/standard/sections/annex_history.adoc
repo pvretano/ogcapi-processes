@@ -25,4 +25,5 @@
 |2026-05-27 |None |Francis Charette-Migneault |all |Replace HTTP by HTTPS for requirement/conformance class references.
 |2026-05-27 |None |Francis Charette-Migneault |CWL |Add multiple clarifications to CWL media-type and their operations.
 |2026-05-27 |None |Francis Charette-Migneault |CWL |Add CWL multipart deployment details and guidance.
+|2026-05-27 |None |Francis Charette-Migneault |AST |Fix invalid AST reference to requirement for 'unsupported media type'.
 |===

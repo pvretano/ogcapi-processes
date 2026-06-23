@@ -23,6 +23,6 @@ test-method::
 
 7. After the DELETE operation, retrieve the status of the job by issuing a HTTP GET operation to the URL `/jobs/{jobID}`.
 
-9. Validate that a document was returned with an HTTP status code of 404.
+8. Validate that a document was returned with an HTTP status code of `404`.
 --
 ====

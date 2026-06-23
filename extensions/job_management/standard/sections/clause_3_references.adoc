@@ -2,11 +2,11 @@
 [bibliography]
 == References
 
-* [[[OAProc-1,OGC 18-062]]] Pross, B.: OGC 18-062, *OGC API - Processes - Part 1: Core*
+* [[[OAProc-1,OGC 18-062]]] Pross, B., Vretanos, P.: OGC 18-062, *OGC API - Processes - Part 1: Core*
 
-* [[[OAProc-2,OGC 20-044]]] Fenoy, G.: OGC 20-044, *OGC API - Processes - Part 2: Deploy, Replace, Undeploy*
+* [[[OAProc-2,OGC 20-044]]] Vretanos, P., Fenoy, G.: OGC 20-044, *OGC API - Processes - Part 2: Deploy, Replace, Undeploy*
 
-* [[[OAProc-3,OGC 21-009]]] Jacovella-St-Louis J.: OGC 21-009, *OGC API - Processes - Part 3: Workflows*
+* [[[OAProc-3,OGC 21-009]]] Jacovella-St-Louis J.: OGC 21-009, *OGC API - Processes - Part 3: Workflows and Chaining*
 
 * [[[OAFeat-1,OGC 17-069r3]]], OGC Portele C.: 17-069r3, *OGC API - Features - Part 1: Core*
 

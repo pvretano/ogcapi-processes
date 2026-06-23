@@ -6,7 +6,8 @@ identifier:: /req/deploy-replace-undeploy/deploy-unsupported-media-type
 
 [.component,class=part]
 --
-If the server does not support the Content-Type header associated with the request body, the code of the response SHALL be `415 Unsupported Media Type`.
+If the server does not support the `Content-Type` header associated with the request body,
+the code of the response SHALL be `415 Unsupported Media Type`.
 --
 
 [.component,class=part]
@@ -17,7 +18,7 @@ The content of that response SHALL be based upon the OpenAPI
 
 [.component,class=part]
 --
-The `type` of the exception SHALL be “https://www.opengis.net/def/exceptions/ogcapi-processes-2/1.0/unsupported-media-type”.
+The `type` of the exception SHALL be `"https://www.opengis.net/def/exceptions/ogcapi-processes-2/1.0/unsupported-media-type"`.
 --
 
 ====
