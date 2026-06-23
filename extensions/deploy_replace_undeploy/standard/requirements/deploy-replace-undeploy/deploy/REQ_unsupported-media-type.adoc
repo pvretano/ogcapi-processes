@@ -11,8 +11,12 @@ If the server does not support the Content-Type header associated with the reque
 
 [.component,class=part]
 --
-The content of that response SHALL be based upon the OpenAPI
-3.0 schema https://raw.githubusercontent.com/opengeospatial/ogcapi-processes/master/core/openapi/schemas/exception.yaml[exception.yaml].
+The content of that response SHALL validate against the following OpenAPI 3.0 schema fragment:
+
+[source,yaml]
+----
+include::../../../../../../openapi/schemas/common-core/exception.yaml[]
+----
 --
 
 [.component,class=part]

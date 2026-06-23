@@ -1,4 +1,4 @@
-[[rec_deploy-replace-undeploy_reaplce_body-ogcapppkg]]
+[[rec_deploy-replace-undeploy_replace_body-ogcapppkg]]
 [recommendation]
 ====
 [%metadata]

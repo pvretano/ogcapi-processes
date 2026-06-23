@@ -15,11 +15,11 @@ test-method::
 
 3. Issue an HTTP DELETE request on each path.
 
-3. Validate the response contains a document content, and was returned with an HTTP status code of 403
+4. Validate the response contains a document content, and was returned with an HTTP status code of 403
 
-4. Validate the document is conform to the https://raw.githubusercontent.com/opengeospatial/ogcapi-processes/master/openapi/schemas/common-core/exception.yaml[exception.yaml] schema.
+5. Validate the document is conform to the https://raw.githubusercontent.com/opengeospatial/ogcapi-processes/master/openapi/schemas/common-core/exception.yaml[exception.yaml] schema.
 
-5. Validate the type of the exception is “https://www.opengis.net/def/exceptions/ogcapi-processes-2/1.0/immutable-process”.
+6. Validate the type of the exception is “https://www.opengis.net/def/exceptions/ogcapi-processes-2/1.0/immutable-process”.
 
 --
 ====

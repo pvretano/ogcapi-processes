@@ -1,3 +1,4 @@
+[[clause_security]]
 == Security Considerations
 
 See <<OAProc-1,OGC API - Processes - Part 1: Core>>, Clause 10.4.

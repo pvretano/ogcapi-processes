@@ -6,7 +6,7 @@ identifier:: /rec/ogcapppkg/execution-unit-docker
 
 [.component,class=part]
 --
-If the execution unit is a Docker image, implementations SHOULD consider supporting the <<rc_docker,Docker Requirements class>>.
+If the execution unit is a Docker image, implementations SHOULD consider supporting the <<clause_docker,Docker Requirements Class>>.
 --
 
 ====

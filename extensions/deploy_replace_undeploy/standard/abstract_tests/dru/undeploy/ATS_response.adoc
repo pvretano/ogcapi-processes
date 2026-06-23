@@ -15,7 +15,7 @@ test-method::
 
 3. Issue an HTTP DELETE request on one path.
 
-3. Validate that no content was returned with an HTTP status code of 204.
+4. Validate that no content was returned with an HTTP status code of 204.
 --
 ====
 

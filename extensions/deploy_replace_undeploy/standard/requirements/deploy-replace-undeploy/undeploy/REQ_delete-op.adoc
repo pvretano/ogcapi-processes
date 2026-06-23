@@ -6,12 +6,17 @@ identifier:: /req/deploy-replace-undeploy/undeploy-delete-op
 
 [.component,class=part]
 --
-For every dynamically added process (path: `/processes/{processID}`), the server SHALL support the HTTP DELETE operation.
+The server SHALL support the HTTP DELETE operation at the resource endpoint (path `/processes/{processID}`).
 --
 
 [.component,class=part]
 --
 The parameter `processID` is each `id` property in the process collection response (JSONPath: `$.processes[*].id`).
+--
+
+[.component,class=part]
+--
+The HTTP DELETE operation SHALL only be supported for dynamically deployed resources (i.e. those where the value of the <<req_deploy-replace-undeploy_static-indicator,`mutable`>> property is set to `true`).
 --
 
 ====
