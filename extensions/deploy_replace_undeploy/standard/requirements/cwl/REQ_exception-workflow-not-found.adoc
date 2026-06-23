@@ -15,7 +15,7 @@ The content of that response SHALL validate against the following OpenAPI schema
 
 [source,yaml]
 ----
-include::../../../../../../openapi/schemas/common-core/exception.yaml[]
+include::../../../../../openapi/schemas/common-core/exception.yaml[]
 ----
 --
 
