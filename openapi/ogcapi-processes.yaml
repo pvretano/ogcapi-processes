@@ -54,14 +54,21 @@ paths:
 
    # OGC API - Processes - Part 1: Core (Jobs, required for ASync execution)
    /jobs:
-      $ref: 'paths/processes-core/pJobsList.yaml'
+      # OGC API - Processes - Part 1: Core
+      get:
+         $ref: 'paths/processes-core/pJobsList.yaml'
+      # OGC API - Processes - Part 4: Job Management
+      post:
+         $ref: 'paths/processes-job-management/pJobsList.yaml'
 
    /jobs/{jobID}:
       $ref: 'paths/processes-core/pJob.yaml'
 
    /jobs/{jobID}/results:
+      # OGC API - Processes - Part 1: Core
       get:
          $ref: 'paths/processes-core/pJobResults.yaml'
+      # OGC API - Processes - Part 4: Job Management
       post:
          $ref: 'paths/processes-job-management/pJobResultsStart.yaml'
 
@@ -72,8 +79,12 @@ paths:
       $ref: 'paths/processes-core/pResultOutputValue.yaml'
 
    # OGC API - Processes - Part 4: Job Management
+
    /jobs/{jobID}/definition:
       $ref: 'paths/processes-job-management/pJobDefinition.yaml'
+
+   /jobs/{jobID}/prov:
+      $ref: 'paths/processes-job-management/pJobProvenance.yaml'
 
 components:
    schemas:

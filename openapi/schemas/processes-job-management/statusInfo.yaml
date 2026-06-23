@@ -1,15 +1,14 @@
 type: object
 required:
    - id
-   - process
-   - processingEntityType
    - status
+   - processingEntityType
 properties:
    id:
       type: string
    process:
       type: string
-      format: uri
+      format: uri-reference
    processingEntityType:
       $ref: "../processes-core/processingEntityType.yaml"
    status:

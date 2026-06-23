@@ -1,9 +1,30 @@
 description: Definition of the parameters of a submitted job.
 type: object
 required:
+  - entity
   - inputs
   - outputs
 properties:
+  entity:
+    description: |-
+      Definition corresponding to the `processingEntityType` of the submitted job (from the 'statusInfo').
+      If the process is a complex workflow, the extended or ad-hoc definition can be provided here.
+      Otherwise, preexising processes and APIs should aim at providing a minimal definition by URI.
+    anyOf:
+      - description: |-
+          Minimal definition of the entity (Process or other OGC API) to be executed for direct invocation.
+          This parameter uses the URI directly (rather than nesting under 'process') purposely to allow other entities.
+        type: string
+        format: uri-reference
+      - allOf:
+          - description: |-
+              Extended Process entity definition, with support of nested 'process' workflow and chaining,
+              field-modifiers, parametrized inputs, or simply a single-level core process definition.
+          - $ref: "../processes-workflow/execute-workflows.yaml"
+      - type: object
+        description: |-
+          Open definition for custom representations, such as an embedded process graph or other link references.
+          Alternate media-types/profiles negotiation should be considered if this is representation cannot express it.
   inputs:
     description: Inputs values of the process submitted to the job.
     type: object
@@ -30,3 +51,4 @@ properties:
     type: array
     items:
       $ref: "../common-core/link.yaml"
+additionalProperties: true

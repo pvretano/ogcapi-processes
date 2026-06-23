@@ -114,7 +114,7 @@ Client                                                        Server
 
 include::../requirements/job-management/create/REQ_post-op.adoc[]
 
-==== Request body
+==== Request
 
 ===== Overview
 
@@ -196,13 +196,17 @@ Client                                                        Server
 
 include::../requirements/job-management/update/REQ_patch-op.adoc[]
 
-==== Request body
+include::../recommendations/job-management/update/PER_put-op.adoc[]
 
-==== Overview
+==== Request
+
+===== Overview
 
 include::../requirements/job-management/update/REQ_body.adoc[]
 
 include::../recommendations/job-management/update/PER_body.adoc[]
+
+include::../recommendations/job-management/update/REC_empty-fields.adoc[]
 
 include::../requirements/job-management/update/REQ_content-type.adoc[]
 
@@ -305,7 +309,7 @@ include::../requirements/job-management/definition/REQ_get-op.adoc[]
 
 include::../requirements/job-management/definition/REQ_response-success.adoc[]
 
-include::../requirements/job-management/definition/REQ_response-body-default.adoc[]
+include::../requirements/job-management/definition/REQ_response-body-ogcapi.adoc[]
 
 include::../requirements/job-management/definition/REQ_response-body-alternate.adoc[]
 
