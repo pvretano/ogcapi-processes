@@ -67,10 +67,10 @@ paths:
    /jobs/{jobID}/results:
       # OGC API - Processes - Part 1: Core
       get:
-         $ref: 'paths/processes-core/pJobResults.yaml'
+         $ref: 'paths/processes-core/operations/oJobResults.yaml'
       # OGC API - Processes - Part 4: Job Management
       post:
-         $ref: 'paths/processes-job-management/pJobResultsStart.yaml'
+         $ref: 'paths/processes-job-management/operations/oJobResultsStart.yaml'
 
    /jobs/{jobID}/results/{outputID}:
       $ref: 'paths/processes-core/pResultOutput.yaml'

@@ -1,2 +1,2 @@
 get:
-   $ref: 'pJobResultsGET.yaml'
+   $ref: "operations/oJobResults.yaml"

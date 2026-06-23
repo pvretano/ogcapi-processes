@@ -1,15 +1,15 @@
 get:
-   summary: retrieve the information about a job
+   summary: retrieve the job provenance
    description: |
-     Retrieve the information about a job.
-   operationId: getJobInputs
+     Retrieve the job provenance details.
+   operationId: getJobProvenance
    tags:
      - Jobs Management
    parameters:
      - $ref: "../../parameters/processes-core/jobID.yaml"
    responses:
      200:
-       $ref: "../../schemas/processes-management/rInputs.yaml"
+       $ref: "../../responses/processes-job-management/rJobProvenance.yaml"
      404:
        $ref: "../../responses/common-core/rNotFound.yaml"
      500:

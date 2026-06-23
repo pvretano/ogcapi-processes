@@ -28,7 +28,8 @@ in link:https://www.w3.org/TR/json-ld/[JSON-LD].
 
 [.component,class=part]
 --
-The server MAY support the following additional content type: `application/xml`
+The server MAY support the following additional content type: `application/provenace+xml`
+(and optionally `application/xml` or `text/xml` as acceptable aliases)
 for link:https://www.w3.org/TR/2013/NOTE-prov-xml-20130430/[PROV-XML] as
 a link:https://www.w3.org/TR/2013/NOTE-prov-overview-20130430/[PROV] representation
 in XML using namespaces defined by the link:https://www.w3.org/TR/2013/REC-prov-dm-20130430/[PROV-DM] data model.

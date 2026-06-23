@@ -1,0 +1,29 @@
+description: Provenance details of a completed job.
+content:
+   application/json:
+      schema:
+         $ref: 'https://www.w3.org/submissions/prov-json/schema'
+   application/ld+json:
+      schema:
+         $ref: 'https://www.w3.org/submissions/prov-jsonld/schema.json'
+   application/provenance+xml:
+      schema:
+         type: string
+   application/xml:
+      schema:
+         type: string
+   text/xml:
+      schema:
+         type: string
+   text/provenance-notation:
+      schema:
+         type: string
+   application/n-triples:
+      schema:
+         type: string
+   text/turtle:
+      schema:
+         type: string
+   text/html:
+      schema:
+         type: string
