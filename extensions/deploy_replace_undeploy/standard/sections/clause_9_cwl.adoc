@@ -2,17 +2,17 @@
 == Requirements Class "CWL"
 
 [[cwl-overview]]
-=== CWL embedded in an OGC Application Package
+=== Sending CWL embedded in an OGC Application Package
 
 ==== Overview 
 
 include::../requirements/requirements_class_cwl.adoc[]
 
-This clause defines the requirements for using CWL, embedded within an <<clause_ogcapppkg,OGC Application Package>>, to describe the execution unit of a multable process.
+This clause defines the requirements for sending a CWL document to the process deployment endpoint (i.e. /processes) embedded in an <<clause_ogcapppkg,OGC Application Package>>
 
-Embedding the CWL in the <<clause_ogcapppkg,OGC Application Package>> means that the `processDescription` property does not need to be specified because the description of the process can be inferred from the CWL value specified in the `executionUnit`.
+Embedding the CWL document in the <<clause_ogcapppkg,OGC Application Package>> means that the `processDescription` property does not need to be specified because the description of the process can be inferred from the CWL value specified in the `executionUnit`.
 
-==== Passing the CWL be reference 
+==== Specifying the CWL by reference 
 
 include::../requirements/cwl/REQ_execution-unit-by-ref.adoc[]
 
@@ -29,7 +29,7 @@ Below is an example of a <<deploy,Deploy request>> body using a CWL-encoded exec
 }
 ----
 
-==== Passing the CWL by value
+==== Specifying the CWL by value
 
 include::../requirements/cwl/REQ_execution-unit-by-val.adoc[]
 
@@ -72,11 +72,11 @@ Below are other examples of <<deploy,Deploy request>> bodies where the CWL value
 }
 ----
 
-=== Using CWL directly
+=== Sending CWL directly
 
 ==== Overview
 
-This clause defines the requirements for POSTing a CWL document directly to the process deployment endpoint (i.e. /processes) without embedding the CWL into an <<clause_ogcapppkg,OGC Application Package>>
+This clause defines the requirements for sending a CWL document directly to the process deployment endpoint (i.e. /processes) without embedding the CWL into an <<clause_ogcapppkg,OGC Application Package>>
 
 ==== CWL request body
 

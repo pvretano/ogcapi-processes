@@ -11,7 +11,7 @@ If the server does not support the Content-Type header associated with the reque
 
 [.component,class=part]
 --
-The content of that response SHALL validate against the following OpenAPI 3.0 schema fragment:
+The content of that response SHALL validate against the following OpenAPI schema fragment:
 
 [source,yaml]
 ----
