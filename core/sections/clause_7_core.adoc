@@ -1420,9 +1420,11 @@ include::../requirements/core/REQ_job-result-op-Nth.adoc[]
 
 NOTE: The size of the value may be determined without actually transmitting the entire result by using the <<rec_core_http-head,HTTP HEAD>> method to retrieve the <<rec_core_content-length,`Content-Length`>> header.
 
-===== The zero-th result
+===== The "0-th" result
 
 include::../requirements/core/REQ_job-result-op-0th.adoc[]
+
+In other words, regardless of the defined cardinality of an output, the first result (i.e. at index value 0) is always accessible.  If, however, the cardinality of the output is 1 (i.e. `maxOccurs=1`) then attempting to retrieve an output value using any index value other than _0_ will result in an HTTP 404 exception.  Also, if the cardinality of the output is greater than one (i.e. `maxOccurs>1`) then other non-zero index values may be used to retrieve output values.  However, out-of-bounds index values will results in an HTTP 404 exception (see requirement: <<req_core_process-execute-success-async-outputs-Nth,/req/core/process-execute-success-async-outputs-Nth>>).  
 
 ==== Response
 
