@@ -11,6 +11,26 @@ OGC API - Processes - Part 2: Deploy, Replace, Undeploy extends the core capabil
 
 CAUTION: This is a DRAFT version of the 2nd part of the OGC API - Processes standards. This draft is not complete and there are open issues that are still under discussion.
 
+== Preface
+
+This document defines the _OGC API - Processes - Part 2: Deploy, Replace, Undeploy_ Standard.
+
+Suggested additions, changes and comments on this standard are welcome and encouraged.  Such suggestions may be submitted as an issue on the
+https://github.com/opengeospatial/ogcapi-processes/issues[_OGC API - Processes_ GitHub repository].
+
+////
+*OGC Declaration*
+////
+
+////
+[THIS TEXT IS ALREADY ADDED AUTOMATICALLY IN THE FRONT PIECE OF ALL OGC DOCUMENTS]
+
+Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.
+
+Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.
+////
+
+
 [[sc_submitters]]
 == Submitters
 
