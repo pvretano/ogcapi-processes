@@ -6,11 +6,11 @@
 identifier:: https://www.opengis.net/spec/ogcapi-processes-2/1.0/conf/cwl
 subject:: <<rc_cwl,https://www.opengis.net/spec/ogcapi-processes-2/1.0/conf/cwl>>
 classification:: Target Type:Web API
-conformance-test:: /req/cwl/execution-unit-by-ref
-conformance-test:: /req/cwl/execution-unit-by-val
-conformance-test:: /req/cwl/body
-conformance-test:: /req/cwl/deploy-w-param
-conformance-test:: /req/cwl/deploy-exception-workflow-not-found
+conformance-test:: /conf/dru/body
+conformance-test:: /conf/cwl/exception-workflow-not-found
+conformance-test:: /conf/cwl/execute-unit-by-ref
+conformance-test:: /conf/cwl/execute-unit-by-val
+conformance-test:: /conf/cwl/w-param
 ====
 
 [[ats_cwl_execution-unit-by-reference]]

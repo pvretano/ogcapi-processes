@@ -1,0 +1,20 @@
+[[ats_docker_config]]
+
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/docker/config
+target:: <<req_docker_config,/req/docker/config>>
+test-purpose:: Verify that the machine used to execute a container image satisfies the requirements specified using the `config` field of the <<sc_ogcapppkg_execution-unit-property,`executionUnit`>> of an <<clause_ogcapppkg,OGC Application Package>>.
+test-method::
++
+--
+1. Obtain a process description for each process listed in the processes array (path: `/processes/{processID}`) by executing the `/conf/core/process-description-op` test from <<OAProc-1>>.
+
+2. Inspect each process and verify that the `executionUnit` member is present and that the execution unit type is `docker` or `oci` (see test: <<ats_docker_image-ref,/conf/docker/image-ref>>).
+
+3. Further verify that the `config` member is present.
+
+4. Execute test `/conf/core/process-execute-op` of <<OAProc-1>> for each process and verify that the machine deployed to execute the container image satisfies the requirements specified using the `config` field of the <<sc_ogcapppkg_execution-unit-property,`executionUnit`>> of application <<clause_ogcapppkg,OGC Application Package>>.
+--
+====

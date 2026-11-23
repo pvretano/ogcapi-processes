@@ -1,0 +1,17 @@
+[[req_docker_image-ref]]
+[requirement]
+====
+[%metadata]
+identifier:: /req/docker/image-ref
+
+[.component,class=part]
+--
+The value of the `type` field of the <<sc_ogcapppkg_execution-unit-property,`executionUnit`>> property of an <<clause_ogcapppkg,OGC Application Package>> SHALL be `docker`.
+--
+
+[.component,class=part]
+--
+The value of the `image` field of the <<sc_ogcapppkg_execution-unit-property,`executionUnit`>> property of an <<clause_ogcapppkg,OGC Application Package>> SHALL be a reference to the container image that implements the executable code of the process.
+--
+
+====

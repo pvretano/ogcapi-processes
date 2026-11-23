@@ -1,10 +1,10 @@
-[[ats_cwl_execute-unit-by-val]]
+[[ats_cwl_execution-unit-by-val]]
 
 [abstract_test]
 ====
 [%metadata]
-identifier:: /conf/cwl/execute-unit-by-val
-target:: <<req_cwl_execute-unit-by-val,/req/cwl/execute-unit-by-val>>
+identifier:: /conf/cwl/execution-unit-by-val
+target:: <<req_cwl_execution-unit-by-val,/req/cwl/execution-unit-by-val>>
 test-purpose:: Verify that a CWL execute units can be passed to the server by value.
 test-method::
 +

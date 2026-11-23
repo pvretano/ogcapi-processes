@@ -6,7 +6,7 @@ identifier:: /req/docker/config
 
 [.component,class=part]
 --
-The `config` field of the <<sc_ogcapppkg_execution-unit-property,`executionUnit` property>> of an <<clause_ogcapppkg,OGC Application Package>> SHALL be used to convey to the processing server hardware and configuration requirements for running the Docker image encapsulating the executable code of a process.
+Processing server hardware and configuration requirements for executing a container image on its deployment platform SHALL be specified using the `config` field of the <<sc_ogcapppkg_execution-unit-property,`executionUnit`>> property of an <<clause_ogcapppkg,OGC Application Package>>.
 --
 
 [.component,class=part]

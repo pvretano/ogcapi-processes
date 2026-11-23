@@ -14,22 +14,22 @@ This clause defines the requirements for describing, in the execution unit of an
 include::../requirements/docker/REQ_schema.adoc[]
 
 [[sc_docker_properties-type-and-image]]
-=== Properties `type` and `image`
+=== Referencing the container image
 
-include::../requirements/docker/REQ_execution-unit.adoc[]
+include::../requirements/docker/REQ_image-ref.adoc[]
 
 [[sc_docker_property-deployment]]
-=== Property `deployment` 
+=== Container deployment platform
 
 include::../requirements/docker/REQ_deployment.adoc[]
 
 [[sc_docker_property-config]]
-=== Property `config`
+=== Execution environment configuration
 
 include::../requirements/docker/REQ_config.adoc[]
 
 [[sc_docker_property-bindings]]
-=== Property `bindings`
+=== Input and output bindings
 
 [[sc_docker_property-bindings-overview]]
 ==== Overview

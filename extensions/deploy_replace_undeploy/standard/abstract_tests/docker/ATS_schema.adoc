@@ -1,0 +1,17 @@
+[[ats_docker_schema]]
+
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/docker/schema
+target:: <<req_docker_schema,/req/docker/schema>>
+test-purpose:: Verify that the `value` field of the <<sc_ogcapppkg_execution-unit-property,`executionUnit`>> member of an <<clause_ogcapppkg,OGC Application Package>> is valid.
+test-method::
++
+--
+1. Obtain a process description for each process listed in the processes array (path: `/processes/{processID}`) by executing the `/conf/core/process-description-op` test from <<OAProc-1>>.
+
+2. Inspect each process and verify that the `executionUnit` member is present.  If it is, verify that its value conforms to https://fix.me[executionUnitContainer.yaml] schema.
+--
+====
+

@@ -11,7 +11,7 @@ A server MAY support immediate creation of the initial process definition when n
 
 [.component,class=part]
 --
-If the operation results in an insertion creating a new process definition rather than a replacement, it SHOULD reflect the appropriate HTTP status code as per the requirement <<req_deploy-replace-undeploy_replace_response,/req/deploy-replace-undeploy/replace-response>>.
+If the operation results in an insertion creating a new process definition rather than a replacement, it SHOULD reflect the appropriate HTTP status code as per the requirement <<req_deploy-replace-undeploy_replace-response-body,/req/deploy-replace-undeploy/replace-response-body>>.
 --
 
 ====

@@ -1,10 +1,10 @@
-[[ats_cwl_execute-unit-by-ref]]
+[[ats_cwl_execution-unit-by-ref]]
 
 [abstract_test]
 ====
 [%metadata]
-identifier:: /conf/cwl/execute-unit-by-ref
-target:: <<req_cwl_execute-unit-by-ref,/req/cwl/execute-unit-by-ref>>
+identifier:: /conf/cwl/execution-unit-by-ref
+target:: <<req_cwl_execution-unit-by-ref,/req/cwl/execution-unit-by-ref>>
 test-purpose:: Verify that a CWL execute unit can be passed to the server by reference.
 test-method::
 +

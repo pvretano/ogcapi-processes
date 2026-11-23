@@ -8,5 +8,4 @@ identifier:: /req/docker/expression-lang
 --
 The language that SHALL be used to specify an expression as the value of a binding parameter SHALL be https://docs.ogc.org/is/21-065r2/21-065r2.html[CQL2].
 --
-
 ====

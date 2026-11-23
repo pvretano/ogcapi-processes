@@ -1,4 +1,4 @@
-[[req_deploy-replace-undeploy_deploy_unsupported-media-type]]
+[[req_deploy-replace-undeploy_replace-unsupported-media-type]]
 [requirement]
 ====
 [%metadata]

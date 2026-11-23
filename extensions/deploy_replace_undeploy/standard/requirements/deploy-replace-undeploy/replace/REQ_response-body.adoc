@@ -6,7 +6,7 @@ identifier:: /req/deploy-replace-undeploy/replace-response-body
 
 [.component,class=part]
 --
-If the replacement response employs HTTP status code `200` or `201` according to requirement <<req_deploy-replace-undeploy_replace_response,/req/deploy-replace-undeploy/replace-response>>, the response body SHALL conform to the summary description of the process as per https://schemas.opengis.net/ogcapi/processes/part1/2.0/openapi/schemas/processSummary.yaml[processSummary.yaml] schema.
+If the replacement response employs HTTP status code `200` or `201` the response body SHALL conform to the summary description of the process as per https://schemas.opengis.net/ogcapi/processes/part1/2.0/openapi/schemas/processSummary.yaml[processSummary.yaml] schema.
 --
 
 [.component,class=part]

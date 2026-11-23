@@ -1,0 +1,32 @@
+[[ats_docker_bindings]]
+
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/docker/bindings
+target:: <<req_docker_bindings,/req/docker/bindings>>
+target:: <<req_docker_input-binding,/req/docker/input-binding>>
+target:: <<req_docker_output-binding,/req/docker/output-binding>>
+target:: <<req_docker_expression-lang,/req/docker/expression-lang>>
+
+test-purpose:: Verify that the binding information specified using the `bindings` field of the <<sc_ogcapppkg_execution-unit-property,`executionUnit`>> of an <<clause_ogcapppkg,OGC Application Package>> can be used to execute the container image.
+test-method::
++
+--
+1. Obtain a description for each process (path: `/processes/{processID}`) listed in the processes array (path: `/processes`) by executing the `/conf/core/process-description-op` test from <<OAProc-1>>.
+
+2. Inspect each process and verify that the `executionUnit` member is present and that the execution unit type is `docker` or `oci` (see test: <<ats_docker_image-ref,/conf/docker/image-ref>>).
+
+3. Further verify that the `bindings` member is present and that it contains one or more `inputBindings` and/or `outputBidings` properties.
+
+4. Verify that any input bindings conform to the https://fix.me[inputBindings.yaml] schema.
+
+5. Verify that any output bindings conform to the https://fix.me[outputBindings.yaml] schema.
+
+6. If the value form of any binding is an expression, verify that the expression is specified using https://docs.ogc.org/is/21-065r2/21-065r2.html[CQL2].
+
+7. Verify successful execution of each process using test `/conf/core/process-execute-op` of <<OAProc-1>>.  This will indicate that the binding information, specified using the `inputBindings` and `outputBindings` properties, is valid and was successfully used to invoke the execution unit (i.e. the binding information was used to  map the process inputs and outputs specified at the API to the arguments necessary to invoke the execution unit in its execution enviroment (e.g. command line arguments).
+
+8. If possible, monitor the execution using appropriate tools (e.g. `docker ps`) to verify that the invocation is valid (e.g that the command line invocation is correct).
+--
+====

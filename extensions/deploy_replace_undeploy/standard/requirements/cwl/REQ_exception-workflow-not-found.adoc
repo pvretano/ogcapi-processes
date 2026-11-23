@@ -1,8 +1,8 @@
-[[req_cwl_deploy_exception-workflow-not-found]]
+[[req_cwl_exception-workflow-not-found]]
 [requirement]
 ====
 [%metadata]
-identifier:: /req/cwl/deploy-exception-workflow-not-found
+identifier:: /req/cwl/exception-workflow-not-found
 
 [.component,class=part]
 --

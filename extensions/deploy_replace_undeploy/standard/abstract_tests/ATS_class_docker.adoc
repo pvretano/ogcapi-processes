@@ -6,17 +6,29 @@
 identifier:: https://www.opengis.net/spec/ogcapi-processes-2/1.0/conf/docker
 subject:: <<rc_docker,https://www.opengis.net/spec/ogcapi-processes-2/1.0/conf/docker>>
 classification:: Target Type:Web API
-conformance-test:: /conf/docker/deploy-body
-conformance-test:: /conf/docker/replace-body
+conformance-test:: /conf/docker/bindings
+conformance-test:: /conf/docker/config
+conformance-test:: /conf/docker/deployment
+conformance-test:: /conf/docker/image-ref
+conformance-test:: /conf/docker/schema
 ====
 
-[[ats_docker_deploy-operation]]
-==== Deploy operation
+==== Schema
 
-include::docker/deploy/ATS_body.adoc[]
+include::docker/ATS_schema.adoc[]
 
-[[ats_docker_replace-operation]]
-==== Replace operation
+==== Container image reference
 
-include::docker/replace/ATS_body.adoc[]
+include::docker/ATS_image-ref.adoc[]
 
+==== Container deplopment platform
+
+include::docker/ATS_deployment.adoc[]
+
+==== Execution environment configuration
+
+include::docker/ATS_config.adoc[]
+
+==== Input and output bindings
+
+include::docker/ATS_bindings.adoc[]

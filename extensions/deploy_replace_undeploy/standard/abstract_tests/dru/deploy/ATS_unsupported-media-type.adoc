@@ -4,7 +4,7 @@
 ====
 [%metadata]
 identifier:: /conf/dru/deploy-unsupported-media-type
-target:: <<req_deploy-replace-undeploy_deploy-unsupported-media-typ,/req/deploy-replace-undeploy/deploy-unsupported-media-type>>
+target:: <<req_deploy-replace-undeploy_deploy-unsupported-media-type,/req/deploy-replace-undeploy/deploy-unsupported-media-type>>
 test-purpose:: Verify that a HTTP status code `415` is generated when a request body is encoded using an unsupported media type.
 test-method::
 +

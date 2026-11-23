@@ -37,7 +37,7 @@ enable support for the Common Workflow Language (CWL):
 The standardization target for all Conformance class defined in this Standard is “Web API”.
 
 Conformance with this Standard shall be checked using all the relevant tests
-specified in <<ats>> of this document. The framework, concepts, and
+specified in <<sc_ats>> of this document. The framework, concepts, and
 methodology for testing, and the criteria to be achieved to claim conformance
 are specified in the OGC Compliance Testing Policies and Procedures and the
 OGC Compliance Testing web site.
