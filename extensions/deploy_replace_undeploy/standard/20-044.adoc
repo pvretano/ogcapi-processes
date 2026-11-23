@@ -2,7 +2,7 @@
 :doctype: standard
 :docsubtype: implementation
 :docnumber: 20-044
-:status: draft
+:status: swg-draft
 :copyright-year: 2019
 :edition: 1.0
 :language: en
