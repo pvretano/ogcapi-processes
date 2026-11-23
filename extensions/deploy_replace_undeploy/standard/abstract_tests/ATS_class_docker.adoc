@@ -13,27 +13,27 @@ conformance-test:: /conf/docker/image-ref
 conformance-test:: /conf/docker/schema
 ====
 
-[[ats_docker-schema]]
+[[ats_docker-Schema]]
 ==== Schema
 
 include::docker/ATS_schema.adoc[]
 
-[[ats_docker-image-ref]]
+[[ats_docker_container-image-ref]]
 ==== Container image reference
 
 include::docker/ATS_image-ref.adoc[]
 
-[[ats_docker-deployment]]
+[[ats_docker_container-deployment-platform]]
 ==== Container deplopment platform
 
 include::docker/ATS_deployment.adoc[]
 
-[[ats_docker-config]]
+[[ats_docker_execution-env-config]]
 ==== Execution environment configuration
 
 include::docker/ATS_config.adoc[]
 
-[[ats_docker-bindings]]
+[[ats_docker_io-bindings]]
 ==== Input and output bindings
 
 include::docker/ATS_bindings.adoc[]
