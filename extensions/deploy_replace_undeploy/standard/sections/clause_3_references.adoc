@@ -5,7 +5,7 @@
 
 * [[[OAProc-1,OGC 18-062]]], Pross, B.: OGC 18-062, *OGC API - Processes - Part 1: Core*
 
-* [[[OAFeat-1,OGC 17-069r3]]], OGC 17-069r3, OGC API - Features - Part 1: Core
+* [[[OAComm-1,OGC 19-072]]], OGC 19-072, OGC API - Common - Part 1: Core
 
 * [[[OAComm-5,OGC 20-004r1]]], OGC 20-004-r2 OGC API - Features - Part 4 / OGC API - Common - Part 5: Create, Replace, Update and Delete
 

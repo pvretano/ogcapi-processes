@@ -16,7 +16,7 @@ If the replacement response employs HTTP status code `204`, the response body SH
 
 [.component,class=part]
 --
-If the replacement response employs HTTP status code `202`, the response body SHALL be status message as per requirement <<https://fix.me/18-062.html#req_core_process-execute-success-async,/req/core/process-execute-success-async>>.
+If the replacement response employs HTTP status code `202`, the content of the response SHALL be based upon the JSON Schema fragment https://raw.githubusercontent.com/opengeospatial/ogcapi-processes/master/openapi/schemas/processes-core/statusInfo.yaml[statusInfo.yaml].
 --
 
 ====

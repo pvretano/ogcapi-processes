@@ -7,7 +7,7 @@ identifier:: https://www.opengis.net/spec/ogcapi-processes-2/1.0/req/deploy-repl
 obligation:: requirement
 subject:: Web API
 inherit:: https://www.opengis.net/spec/ogcapi-processes-1/2.0/req/core
-inherit:: http://www.opengis.net/spec/ogcapi-features-4/1.0/req/create-replace-delete
+inherit:: http://www.opengis.net/spec/ogcapi-common-5/1.0/req/create-replace-delete
 inherit:: http://www.opengis.net/spec/ogcapi-common-5/1.0/req/optimistic-locking-timestamps
 inherit:: http://www.opengis.net/spec/ogcapi-common-5/1.0/req/optimistic-locking-etags
 inherit:: http://www.opengis.net/spec/ogcapi-common-5/1.0/req/return-resource-representation-in-response
@@ -30,5 +30,4 @@ requirement:: /req/deploy-replace-undeploy/package-response-body
 requirement:: /req/deploy-replace-undeploy/replace-unsupported-media-type
 requirement:: /req/deploy-replace-undeploy/replace-response-body
 requirement:: /req/deploy-replace-undeploy/replace-body
-
 ====
