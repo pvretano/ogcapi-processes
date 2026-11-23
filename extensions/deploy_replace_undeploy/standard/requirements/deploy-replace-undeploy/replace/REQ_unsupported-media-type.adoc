@@ -1,0 +1,27 @@
+[[req_deploy-replace-undeploy_deploy_unsupported-media-type]]
+[requirement]
+====
+[%metadata]
+identifier:: /req/deploy-replace-undeploy/replace-unsupported-media-type
+
+[.component,class=part]
+--
+If the server does not support the media type of the request body, asserted using the `Content-Type` HTTP header, the server SHALL respond with an HTTP status code `415`.
+--
+
+[.component,class=part]
+--
+The content of that response SHALL validate against the following OpenAPI schema fragment:
+
+[source,yaml]
+----
+include::../../../../../../openapi/schemas/common-core/exception.yaml[]
+----
+--
+
+[.component,class=part]
+--
+The `type` of the exception SHALL be `pass:["https://www.opengis.net/def/exceptions/ogcapi-processes-2/1.0/unsupported-media-type"]`.
+--
+
+====

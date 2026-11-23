@@ -73,7 +73,10 @@ The Processes API Part 2 extension recognizes that an OGC web processing API may
 
 However, to make it clear which processes in a collection (path: `/processes`) are built-in - and thus immutable - and which have been dynamically deployed, the processes collection schema is modified to add a flag indicating this aspect of a process.
 
-include::../requirements/deploy-replace-undeploy/immutable/REQ_indicator.adoc[]
+include::../requirements/deploy-replace-undeploy/immutable/REQ_static-indicator.adoc[]
+
+include::../requirements/deploy-replace-undeploy/immutable/REQ_response-immutable.adoc[]
+
 
 The following schema fragment extends the process summary accessible via the
 `/processes` path to add the `mutable` property.
@@ -145,9 +148,7 @@ include::../requirements/deploy-replace-undeploy/deploy/REQ_body.adoc[]
 
 include::../recommendations/deploy-replace-undeploy/deploy/PER_body.adoc[]
 
-include::../requirements/deploy-replace-undeploy/deploy/REQ_content-type.adoc[]
-
-See https://www.rfc-editor.org/rfc/rfc7231#section-3.1.1.5[section 3.1.1.5 of RFC 7231] for details.
+include::../recommendations/deploy-replace-undeploy/deploy/PER_media-type.adoc[]
 
 [[sc_deploy_ogc-application-package-body]]
 ===== OGC Application Package body
@@ -175,10 +176,8 @@ include::../requirements/deploy-replace-undeploy/deploy/REQ_unsupported-media-ty
 
 include::../requirements/deploy-replace-undeploy/deploy/REQ_response-duplicate.adoc[]
 
-include::../requirements/deploy-replace-undeploy/deploy/REQ_response-immutable.adoc[]
-
 [[sc_replace]]
-=== Replacing an existing processes
+=== Replacing an existing process
 
 [[sc_replace_sequence-diagram]]
 ==== Sequence diagram
@@ -219,8 +218,6 @@ include::../requirements/deploy-replace-undeploy/replace/REQ_body.adoc[]
 
 include::../recommendations/deploy-replace-undeploy/replace/PER_body.adoc[]
 
-include::../requirements/deploy-replace-undeploy/replace/REQ_content-type.adoc[]
-
 [[sc_replace_ogc-application-package-body]]
 ===== OGC Application Package body
 
@@ -233,8 +230,6 @@ include::../recommendations/deploy-replace-undeploy/replace/REC_body-cwl.adoc[]
 
 [[sc_replace_response]]
 ==== Response
-
-include::../requirements/deploy-replace-undeploy/replace/REQ_response.adoc[]
 
 include::../requirements/deploy-replace-undeploy/replace/REQ_response-body.adoc[]
 

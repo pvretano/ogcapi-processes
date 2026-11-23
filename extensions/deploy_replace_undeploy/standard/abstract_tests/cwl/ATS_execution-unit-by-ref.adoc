@@ -1,0 +1,30 @@
+[[ats_cwl_execute-unit-by-ref]]
+
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/cwl/execute-unit-by-ref
+target:: <<req_cwl_execute-unit-by-ref,/req/cwl/execute-unit-by-ref>>
+test-purpose:: Verify that a CWL execute unit can be passed to the server by reference.
+test-method::
++
+--
+1. Create an <<clause_ogcapppkg,OGC Application Package>> document.
+
+2. Within the <<clause_ogcapppkg,OGC Application Package>> document, encoding the location of the CWL resource using the `href` member of the link.
+
+3. Within the <<clause_ogcapppkg,OGC Application Package>> document, encoding the type of the referenced CWL resource using the `type` member of the link according to the following possibilities:
+
+   . If the CWL resource is encoded in JSON then set the value of the `type` member to be `application/cwl+json`.
+
+   . If the CWL resource is encoded as YAML then set the value of the `type` member to be `application/cwl+yaml`.
+
+   . If the encoding of the CWL resource is not know then set the value of the `type` member to be `application/cwl`.
+
+4. Execute test `/conf/create-replace-delete/create` or `/conf/create-replace-delete/replace` of <<OAComm-5>>.
+
+5. Verify that the test completes successfully.
+
+6. Repeat the test to exercise all the options outline in #3.
+--
+====

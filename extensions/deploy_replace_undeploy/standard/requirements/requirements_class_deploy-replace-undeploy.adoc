@@ -15,23 +15,20 @@ inherit:: http://www.opengis.net/spec/ogcapi-common-5/1.0/req/handling
 inherit:: <<rfc2616,RFC 2616 (HTTP/1.1)>>
 inherit:: <<rfc6906,RFC 6906 (The 'profile' Link Relation Type)>>
 
-requirement:: /req/deploy-replace-undeploy/resource-endpoints
+requirement:: /req/deploy-replace-undeploy/resources-endpoint
 requirement:: /req/deploy-replace-undeploy/resource-endpoint
 requirement:: /req/deploy-replace-undeploy/deploy-unsupported-media-type
-requirement:: /req/deploy-replace-undeploy/deploy-content-type
 requirement:: /req/deploy-replace-undeploy/deploy-response-pid
-requirement:: /req/deploy-replace-undeploy/deploy-response-immutable
-requirement:: /req/deploy-replace-undeploy/deploy-response-success
 requirement:: /req/deploy-replace-undeploy/deploy-response-duplicate
 requirement:: /req/deploy-replace-undeploy/deploy-response-body
 requirement:: /req/deploy-replace-undeploy/deploy-body
+requirement:: /req/deploy-replace-undeploy/response-immutable
 requirement:: /req/deploy-replace-undeploy/static-indicator
 requirement:: /req/deploy-replace-undeploy/package-response-success
 requirement:: /req/deploy-replace-undeploy/package-get-op
 requirement:: /req/deploy-replace-undeploy/package-response-body
-requirement:: /req/deploy-replace-undeploy/replace-content-type
-requirement:: /req/deploy-replace-undeploy/replace-response
+requirement:: /req/deploy-replace-undeploy/replace-unsupported-media-type
 requirement:: /req/deploy-replace-undeploy/replace-response-body
 requirement:: /req/deploy-replace-undeploy/replace-body
-requirement:: /req/deploy-replace-undeploy/undeploy-response
+
 ====

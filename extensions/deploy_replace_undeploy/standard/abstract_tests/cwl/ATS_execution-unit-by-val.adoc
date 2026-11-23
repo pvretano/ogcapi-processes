@@ -1,0 +1,28 @@
+[[ats_cwl_execute-unit-by-val]]
+
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/cwl/execute-unit-by-val
+target:: <<req_cwl_execute-unit-by-val,/req/cwl/execute-unit-by-val>>
+test-purpose:: Verify that a CWL execute units can be passed to the server by value.
+test-method::
++
+--
+1. Create an <<clause_ogcapppkg,OGC Application Package>> document.
+
+2. Within the <<clause_ogcapppkg,OGC Application Package>> document, using a qualified value, specify the code of the execution unit as CWL according to one of the following encodings:
+
+   . Set the media type of the qualified value as `application/cwl` and encode the CWL in the execution unit as a JSON object.
+
+   . Set the media type of the qualified value as `application/cwl+json` and encode the CWL in the execution unit as an embedded JSON string.
+
+   . Set the media type of the qualified value as `application/cwl+yaml` and encode the CWL in the execution unit as an embedded YAML string.
+
+3. Execute test `/conf/create-replace-delete/create` or `/conf/create-replace-delete/replace` of <<OAComm-5>>.
+
+4. Verify that the test completes successfully.
+
+5. Repeat the test to exercise all the options outline in #2.
+--
+====

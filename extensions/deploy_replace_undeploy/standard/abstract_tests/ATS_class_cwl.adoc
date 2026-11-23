@@ -6,17 +6,31 @@
 identifier:: https://www.opengis.net/spec/ogcapi-processes-2/1.0/conf/cwl
 subject:: <<rc_cwl,https://www.opengis.net/spec/ogcapi-processes-2/1.0/conf/cwl>>
 classification:: Target Type:Web API
-conformance-test:: /conf/cwl/deploy-body
-conformance-test:: /conf/cwl/replace-body
+conformance-test:: /req/cwl/execution-unit-by-ref
+conformance-test:: /req/cwl/execution-unit-by-val
+conformance-test:: /req/cwl/body
+conformance-test:: /req/cwl/deploy-w-param
+conformance-test:: /req/cwl/deploy-exception-workflow-not-found
 ====
 
-[[ats_cwl_deploy-operation]]
-==== Deploy operation
+[[ats_cwl_execution-unit-by-reference]]
+==== Specifying the CWL by reference
 
-include::cwl/deploy/ATS_body.adoc[]
+include::cwl/ATS_execution-unit-by-ref.adoc[]
 
-[[ats_cwl_replace-operation]]
-==== Replace operation
+[[ats_cwl_execution-unit-by-value]]
+==== Specifying the CWL by value
 
-include::cwl/replace/ATS_body.adoc[]
+include::cwl/ATS_execution-unit-by-val.adoc[]
 
+[[ats_cwl_deploy-directly]]
+==== Sending CWL directly
+
+include::cwl/ATS_body.adoc[]
+
+[[ats_cwl_w-parameter]]
+==== w parameter
+
+include::cwl/ATS_w-param.adoc[]
+
+include::cwl/ATS_exception-workflow-not-found.adoc[]

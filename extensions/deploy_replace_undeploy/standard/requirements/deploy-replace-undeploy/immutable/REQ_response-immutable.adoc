@@ -1,0 +1,32 @@
+[[req_deploy-replace-undeploy_response-immutable]]
+[requirement]
+====
+[%metadata]
+identifier:: /req/deploy-replace-undeploy/response-immutable
+
+[.component,class=part]
+--
+If an attempt is made to mutate an immutable process then the server SHALL response with an HTTP status code `403`.
+--
+
+[.component,class=part]
+--
+A response MAY include a `Location` header with the URI of the existing process (path: `/processes/{processID}`).
+--
+
+[.component,class=part]
+--
+The content of that response SHALL validate against the following OpenAPI schema fragment:
+
+[source,yaml]
+----
+include::../../../../../../openapi/schemas/common-core/exception.yaml[]
+----
+--
+
+[.component,class=part]
+--
+The `type` of the exception SHALL be “https://www.opengis.net/def/exceptions/ogcapi-processes-2/1.0/immutable-process”.
+--
+
+====

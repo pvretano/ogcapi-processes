@@ -1,0 +1,22 @@
+[[ats_cwl_exception-workflow-not-found]]
+
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/cwl/exception-workflow-not-found
+target:: <<req_cwl_exception-workflow-not-found,/req/cwl/exception-workflow-not-found>>
+test-purpose:: Verify that the server correctly processes the `w` parameter.
+test-method::
++
+--
+1. Create a process description using https://www.commonwl.org/v1.2/[CWL] that contains more that one workflow.
+
+2. Execute test `/conf/create-replace-delete/create` or `/conf/create-replace-delete/replace` of <<OAComm-5>> using the `w` parameter to identify a process that does not actually exist in the CWL document.
+
+3. Verify that the server responds with an HTTP status code of `400`.
+
+4. Validate that the document in the response body conforms to the https://schemas.opengis.net/ogcapi/processes/part1/2.0/openapi/schemas/exception.yaml[exception.yaml] schema.
+
+5. Verify that the exception type (member: `type`) is `https://www.opengis.net/def/exceptions/ogcapi-processes-2/1.0/workflow-not-found`.
+--
+====

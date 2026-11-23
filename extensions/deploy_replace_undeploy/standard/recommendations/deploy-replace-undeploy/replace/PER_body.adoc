@@ -1,4 +1,4 @@
-[[per_deploy-replace-undeploy_replace_body]]
+[[per_deploy-replace-undeploy_replace-body]]
 [permission]
 ====
 [%metadata]

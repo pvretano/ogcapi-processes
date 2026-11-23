@@ -1,0 +1,20 @@
+[[ats_dru_static-indicator]]
+
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/dru/static-indicator
+target:: <<req_deploy-replace-undeploy_static-indicator,/req/deploy-replace-undeploy/static-indicator>>
+test-purpose:: Verify that a process is marked as mutable when it is dynamically deployed.
+test-method::
++
+--
+1. Create a process description using some vocabulary supported by the server (e.g. <<clause_ogcapppkg,OGC Application Package>>).
+
+2. Execute test `/conf/create-replace-delete/create` of <<OAComm-5>>.
+
+3. Fetch the description of the process according to test `/conf/core/process-description-op` of <<OAProc-1>>.
+
+4. Inspect the process description and verify that the value of property that indicates whether the process is mutable or not is set to `true`.
+--
+====

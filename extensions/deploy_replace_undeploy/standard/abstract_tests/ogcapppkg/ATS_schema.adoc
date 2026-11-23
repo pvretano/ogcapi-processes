@@ -1,0 +1,16 @@
+[[ats_ogcapppkg_schema]]
+
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/ogcapppkg/schema
+target:: /req/ogcapppkg/schema
+test-purpose:: Verify that a document is a valid <<clause_ogcapppkg,OGC Application Package>> document.
+test-method::
++
+--
+1. Obtain an <<clause_ogcapppkg,OGC Application Package>> document (e.g. by executing test <<ats_dru_package-get-op,/conf/dru/package-get-op>> with the value of the HTTP `Accept` header set to `application/ogcapppkg+json`).
+
+2. Verify the document conforms to https://schemas.opengis.net/ogcapi/processes/part2/1.0/openapi/schemas/process-dru/ogcapppkg.yaml[ogcapppkg.yaml].
+--
+====

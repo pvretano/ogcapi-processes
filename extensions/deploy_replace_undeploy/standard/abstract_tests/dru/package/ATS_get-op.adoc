@@ -1,0 +1,19 @@
+[[ats_dru_package-get-op]]
+
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/dru/package-get-op
+target:: <<req_deploy-replace-undeploy_package-get-op,/req/deploy-replace-undeploy/package-get-op>>
+test-purpose:: Verify that the package used to deploys a process can be retrieved for each mutable process.
+test-method::
++
+--
+1. Execute the `/conf/core/process-list-op` test of <<OAProc-1>> to get the list of processes offered by a server.
+
+2. For each mutable process, issue an HTTP GET request to the URL `/processes/{processID}/package`.
+
+3. Verify the server's response in each case using tests `/conf/dru/package-response-success` and `/conf/dru/package-response-body`.
+--
+====
+

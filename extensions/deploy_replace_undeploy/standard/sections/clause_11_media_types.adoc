@@ -5,10 +5,10 @@ See <<OAProc-1>>, Clause 13.
 
 Additional JSON media types that would typically be used in a server that supports JSON are:
 
-* `application/ogcapppkg+json`
-* `application/cwl+json`
+* `application/ogcapppkg+json`: An <<clause_ogcapppkg,OGC Application Package>> encoded in JSON.
+* `application/cwl+json`: A CWL document encoded in JSON.
 
 Additional CWL media types that would typically be used in a server that supports CWL are:
 
-* `application/cwl`
-* `application/cwl+yaml`
+* `application/cwl`: A generic CWL document; can be encoded as JSON or YAML.
+* `application/cwl+yaml` A CWL document encoded as YAML.

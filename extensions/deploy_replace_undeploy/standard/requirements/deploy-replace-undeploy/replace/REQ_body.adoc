@@ -1,4 +1,4 @@
-[[req_deploy-replace-undeploy_replace_body]]
+[[req_deploy-replace-undeploy_replace-body]]
 [requirement]
 ====
 [%metadata]
@@ -8,5 +8,4 @@ identifier:: /req/deploy-replace-undeploy/replace-body
 --
 The body of a PUT request SHALL contain a formal description of the replacement process.
 --
-
 ====

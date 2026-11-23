@@ -1,0 +1,20 @@
+[[ats_dru_replace-response-body]]
+
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/dru/replace-response-body
+target:: <<req_deploy-replace-undeploy_replace-response-body,/req/replace-replace-undeploy/replace-response-body>>
+test-purpose:: Validate that the server generates a valid response when a process is replaced.
+test-method::
++
+--
+1. Execute test `/conf/dru/replace-body`.
+
+2. If the response is a HTTP status code `200` or `201` verify that the response contains a summary description of the new process and conforms to the https://schemas.opengis.net/ogcapi/processes/part1/2.0/openapi/schemas/processSummary.yaml[processSummary.yaml]
+
+3. If the response is a HTTP status code `204` then retrieve a description of the process and verify that it conforms to the description presented to the server via the HTTP PUT request.
+
+4. If the response is a HTTP status code `202` then verify that the response body is a valid asynchronous status message as per requirement <<https://fix.me/18-062.html#req_core_process-execute-success-async,/req/core/process-execute-success-async>>.
+--
+====

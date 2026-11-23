@@ -8,9 +8,8 @@ obligation:: requirement
 subject:: Web API
 inherit:: https://www.opengis.net/spec/ogcapi-processes-1/2.0/req/core
 inherit:: <<rc_deploy-replace-undeploy,https://www.opengis.net/spec/ogcapi-processes-2/1.0/req/deploy-replace-undeploy>>
-requirement:: /req/ogcapppkg/body
+
 requirement:: /req/ogcapppkg/schema
-requirement:: /req/ogcapppkg/executionUnit-schema
-requirement:: /req/ogcapppkg/package-response-body
 requirement:: /req/ogcapppkg/process-description
+requirement:: /req/ogcapppkg/executionUnit-schema
 ====

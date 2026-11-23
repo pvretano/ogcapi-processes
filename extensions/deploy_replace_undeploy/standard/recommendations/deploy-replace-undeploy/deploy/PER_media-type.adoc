@@ -1,0 +1,11 @@
+[[per_deploy-replace-undeploy_media-type]]
+[permission]
+====
+[%metadata]
+identifier:: /per/deploy-replace-undeploy/media-type
+
+[.component,class=part]
+--
+The media type of the request body MAY be asserted as per https://www.rfc-editor.org/rfc/rfc7231#section-3.1.1.5[section 3.1.1.5 of RFC 7231].
+--
+====

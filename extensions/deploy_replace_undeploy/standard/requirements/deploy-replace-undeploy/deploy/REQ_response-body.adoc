@@ -1,4 +1,4 @@
-[[req_deploy-replace-undeploy_deploy_response-body]]
+[[req_deploy-replace-undeploy_deploy-response-body]]
 [requirement]
 ====
 [%metadata]

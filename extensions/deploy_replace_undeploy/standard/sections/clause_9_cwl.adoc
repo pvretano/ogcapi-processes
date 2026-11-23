@@ -219,12 +219,3 @@ When encoded in CWL processes are identified as instances of the workflow class.
 include::../requirements/cwl/REQ_w-param.adoc[]
 
 include::../requirements/cwl/REQ_exception-workflow-not-found.adoc[]
-
-[[sc_cwl_media-types]]
-=== Media types in operations
-
-include::../requirements/cwl/REQ_media-type-request.adoc[]
-
-
-include::../requirements/cwl/REQ_media-type-response.adoc[]
-

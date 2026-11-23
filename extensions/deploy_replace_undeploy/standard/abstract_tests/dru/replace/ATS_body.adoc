@@ -1,0 +1,17 @@
+[[ats_dru_replace-body]]
+
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/dru/replace-body
+target:: <<req_deploy-replace-undeploy_replace-body,/req/replace-replace-undeploy/replace-body>>
+test-purpose:: Validate that the server can replace an existing process given a valid description of a replacement process.
+test-method::
++
+--
+1. Create a process description using some vocabulary supported by the server (e.g. <<clause_ogcapppkg,OGC Application Package>>).
+
+2. Execute test `/conf/create-replace-delete/replace` of <<OAComm-5>>.
+--
+====
+

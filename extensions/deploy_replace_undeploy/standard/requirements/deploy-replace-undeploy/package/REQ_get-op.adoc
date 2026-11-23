@@ -1,4 +1,4 @@
-[[req_deploy-replace-undeploy_package_get-op]]
+[[req_deploy-replace-undeploy_package-get-op]]
 [requirement]
 ====
 [%metadata]

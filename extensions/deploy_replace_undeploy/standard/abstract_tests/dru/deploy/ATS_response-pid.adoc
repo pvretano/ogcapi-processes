@@ -1,0 +1,18 @@
+[[ats_dru_deploy-response-pid]]
+
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/dru/deploy-response-pid
+target:: <<req_deploy-replace-undeploy_deploy-response-pid,/req/deploy-replace-undeploy/deploy-response-pid>>
+test-purpose:: Verify that the process identifier assigned to a deployed process is the one that is specified in the process description.
+test-method::
++
+--
+1. Create a process description using some vocabulary supported by the server (e.g. <<clause_ogcapppkg,OGC Application Package>>).
+
+2. Execute test `/conf/create-replace-delete/create` of <<OAComm-5>>.
+
+3. Inspect the process summary in the response body and verify that the process identifier (member: `id`) matches the process identifier specified in the process description presented to the server in step #1.
+--
+====

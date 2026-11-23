@@ -6,25 +6,22 @@
 identifier:: https://www.opengis.net/spec/ogcapi-processes-2/1.0/conf/ogcapppkg
 subject:: <<rc_ogcapppkg,https://www.opengis.net/spec/ogcapi-processes-2/1.0/conf/ogcapppkg>>
 classification:: Target Type:Web API
-conformance-test:: /conf/ogcapppkg/deploy-body
-conformance-test:: /conf/ogcapppkg/deploy-response
-conformance-test:: /conf/ogcapppkg/deploy-response-success
-conformance-test:: /conf/ogcapppkg/deploy-response-duplicate
-conformance-test:: /conf/ogcapppkg/replace-body
-conformance-test:: /conf/ogcapppkg/replace-response
+conformance-test:: /conf/ogcapppkg/schema
+conformance-test:: /conf/ogcapppkg/process-description
+conformance-test:: /conf/ogcapppkg/executionUnit
 ====
 
-[[ats_ogcapppkg_deploy-operation]]
-==== Deploy operation
+[[ats_schema]]
+==== Schema
 
-include::ogcapppkg/deploy/ATS_body.adoc[]
-include::ogcapppkg/deploy/ATS_response.adoc[]
-include::ogcapppkg/deploy/ATS_response-success.adoc[]
-include::ogcapppkg/deploy/ATS_response-duplicate.adoc[]
+include::ogcapppkg/ATS_schema.adoc[]
 
-[[ats_ogcapppkg_replace-operation]]
-==== Replace operation
+[[ats_process-description]]
+==== Process pescription
 
-include::ogcapppkg/replace/ATS_body.adoc[]
-include::ogcapppkg/replace/ATS_response.adoc[]
+include::ogcapppkg/ATS_process-description.adoc[]
 
+[[ats_executionUnit]]
+==== Execution unit
+
+include::ogcapppkg/ATS_executionUnit.adoc[]

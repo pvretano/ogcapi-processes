@@ -1,6 +1,6 @@
 [[ats]]
+
 [appendix,obligation="normative"]
-[[ats_abstract-test-suite]]
 == Abstract Test Suite
 
 [[ats_introduction]]
@@ -12,11 +12,11 @@ The Web API under test can require authorization. Any Executable Test Suite impl
 
 The following requirements apply for a server implementing the OGC API — Processes — Part 2: Deploy, Replace, Undeploy under test:
 
-include::../abstract_tests/dru/ATS_mutable-process.adoc[]
+include::../abstract_tests/dru/testing/ATS_mutable-process.adoc[]
 
 In case both an <<rc_ogcapppkg,OGC Application Package>> and <<rc_cwl,CWL>> conformance classes are supported, the following requirement applies for a server implementing the OGC API — Processes — Part 2: Deploy, Replace, Undeploy being tested:
 
-include::../abstract_tests/dru/ATS_test-process.adoc[]
+include::../abstract_tests/dru/testing/ATS_test-process.adoc[]
 
 [[ats_conformance-class_deploy-replace-undeploy]]
 === Conformance Class Deploy, Replace, Undeploy

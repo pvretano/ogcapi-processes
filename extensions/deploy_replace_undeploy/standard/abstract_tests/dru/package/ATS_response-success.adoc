@@ -1,0 +1,19 @@
+[[ats_dru_package-response-success]]
+
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/dru/package-response-success
+target:: <<req_deploy-replace-undeploy_package-response-success,/req/deploy-replace-undeploy/package-response-success>>
+test-purpose:: Verify that the server responds with a HTTP status code of `200` what a process' package is retrieved.
+test-method::
++
+--
+1. Execute the test `/conf/core/process-list-op` from <<OAProc-1>> to get the list of processes offered by a server.
+
+2. For each mutable process, issue an HTTP GET request to the URL `/processes/{processID}/package`.
+
+3. Verify the server response with an HTTP status code of `200` in each case.
+--
+====
+

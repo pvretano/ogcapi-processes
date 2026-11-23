@@ -1,19 +1,20 @@
-[[ats_dru_deploy_unsupported-media-type]]
+[[ats_dru_deploy-unsupported-media-type]]
 
 [abstract_test]
 ====
 [%metadata]
 identifier:: /conf/dru/deploy-unsupported-media-type
-target:: <<req_deploy-replace-undeploy_deploy_unsupported-media-type,/req/deploy-replace-undeploy/deploy-unsupported-media-type>>
-test-purpose:: Validate that the server returns a 415 status code with a relevant exception
+target:: <<req_deploy-replace-undeploy_deploy-unsupported-media-typ,/req/deploy-replace-undeploy/deploy-unsupported-media-type>>
+test-purpose:: Verify that a HTTP status code `415` is generated when a request body is encoded using an unsupported media type.
 test-method::
 +
 --
-1. Validate that a document was returned with an HTTP status code of `415` (Unsupported Media Type).
+1. Execute test `/conf/create-replace-delete/create` of <<OAComm-5>> to deploy the process using a media type not supported by the server.
 
-2. Validate that the document in the response body is conform to the https://schemas.opengis.net/ogcapi/processes/part1/1.0/openapi/schemas/exception.yaml[exception.yaml] schema.
+2. Verify that the server responds with an HTTP status code of `415`.
 
-3. Validate that the type of the exception is `"https://www.opengis.net/def/exceptions/ogcapi-processes-2/1.0/unsupported-media-type"`.
+3. Validate that the document in the response body is conform to the https://schemas.opengis.net/ogcapi/processes/part1/2.0/openapi/schemas/exception.yaml[exception.yaml] schema.
+
+4. Verify that the exception type (member: `type`) is `https://www.opengis.net/def/exceptions/ogcapi-processes-2/1.0/unsupported-media-type`.
 --
 ====
-

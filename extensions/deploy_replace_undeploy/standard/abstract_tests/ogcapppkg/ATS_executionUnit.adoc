@@ -1,0 +1,16 @@
+[[ats_ogcapppkg_executionUnit]]
+
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/ogcapppkg/executionUnit
+target:: /req/ogcapppkg/executionUnit
+test-purpose:: Verify that the execution unit in a <<clause_ogcapppkg,OGC Application Package>> document is valid.
+test-method::
++
+--
+1. Execute the test <<ats_ogcapppkg_schema,/conf/ogcapppkg/schema>> to obtain an <<clause_ogcapppkg,OGC Application Package>> document.
+
+2. Verify that the value of the `executionUnit` member conforms to https://schemas.opengis.net/ogcapi/processes/part2/1.0/openapi/schemas/process-dru/executionUnit.yaml[executionUnit.yaml].
+--
+====

@@ -1,0 +1,16 @@
+[[ats_ogcapppkg_process-description]]
+
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/ogcapppkg/process-description
+target:: /req/ogcapppkg/process-description
+test-purpose:: Verify that the process description in an <<clause_ogcapppkg,OGC Application Package>> document is valid.
+test-method::
++
+--
+1. Execute the test <<ats_ogcapppkg_schema,/conf/ogcapppkg/schema>> to obtain an <<clause_ogcapppkg,OGC Application Package>> document.
+
+2. Verify that the value of the `processDescription/process` member conforms to https://schemas.opengis.net/ogcapi/processes/part2/1.0/openapi/schemas/process-dru/process.yaml[process.yaml].
+--
+====

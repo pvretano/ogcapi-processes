@@ -1,0 +1,19 @@
+[[ats_cwl_body]]
+
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/dru/body
+target:: <<req_cwl_body,/req/cwl/body>>
+test-purpose:: Validate that the server can deploy a process given a valid description of that process.
+test-method::
++
+--
+1. Create a process description using https://www.commonwl.org/v1.2/[CWL].
+
+2. Execute test `/conf/create-replace-delete/create` of <<OAComm-5>> and verify that it completes successfully.
+
+3. Modify the https://www.commonwl.org/v1.2/[CWL] (or create an entirely new one) and execute test `/conf/create-replace-delete/create` of <<OAComm-5>>.  Verify that it completes successfully.
+--
+====
+

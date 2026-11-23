@@ -1,4 +1,4 @@
-[[req_deploy-replace-undeploy_deploy_response-pid-pid]]
+[[req_deploy-replace-undeploy_deploy-response-pid]]
 [requirement]
 ====
 [%metadata]

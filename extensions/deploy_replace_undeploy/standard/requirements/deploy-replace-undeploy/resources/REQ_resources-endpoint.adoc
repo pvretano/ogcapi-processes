@@ -1,8 +1,8 @@
-[[req_deploy-replace-undeploy_resources-endpoints]]
+[[req_deploy-replace-undeploy_resources-endpoint]]
 [requirement]
 ====
 [%metadata]
-identifier:: /req/deploy-replace-undeploy/resource-endpoints
+identifier:: /req/deploy-replace-undeploy/resources-endpoint
 
 [.component,class=part]
 --

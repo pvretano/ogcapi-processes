@@ -1,0 +1,20 @@
+[[ats_dru_endpoints]]
+
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/dru/endpoints
+target:: <<req_deploy-replace-undeploy_resources-endpoint,/req/deploy-replace-undeploy/resources-endpoint>>
+target:: <<req_deploy-replace-undeploy_resource_endpoint,/req/deploy-replace-undeploy/resource-endpoint>>
+test-purpose:: Verify that resources are each process of the processes array of the API.
+test-method::
++
+--
+1. Given the landing page URI {landingPageUri} of the Web API under test;
+
+2. Then assert:
+
+   . that the array of available processes can be obtained in response to a GET request from the `{landingPageUri}/processes` endpoint,
+   . and a description of each individual process with identifier `{processID}` can be obtained in response to a GET request from the `{landingPageUri}/processes/{processID}` endpoint.
+--
+====
