@@ -9,7 +9,7 @@ include::../requirements/requirements_class_ogcapppkg.adoc[]
 This requirements class defines the schema of an `OGC Application Package`.
 
 An `OGC Application Package` is a document that describes a process in sufficient detail so that an implementation of this Standard can dynamically deploy that
-process and make it accessible via an the processes API defined in https://fix.me["OGC API - Processes - Part 1: Core"].
+process and make it accessible via an the processes API defined in <<OAProc-1,"OGC API - Processes - Part 1: Core">>.
 
 The information contained in an `OGC Application Package` includes:
 
