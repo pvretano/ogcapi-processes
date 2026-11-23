@@ -11,6 +11,7 @@ OGC API - Processes - Part 2: Deploy, Replace, Undeploy extends the core capabil
 
 CAUTION: This is a DRAFT version of the 2nd part of the OGC API - Processes standards. This draft is not complete and there are open issues that are still under discussion.
 
+[[sc_preface]]
 == Preface
 
 This document defines the _OGC API - Processes - Part 2: Deploy, Replace, Undeploy_ Standard.

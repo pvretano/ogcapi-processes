@@ -1,4 +1,4 @@
-[[ats]]
+[[sc_ats]]
 
 [appendix,obligation="normative"]
 == Abstract Test Suite
