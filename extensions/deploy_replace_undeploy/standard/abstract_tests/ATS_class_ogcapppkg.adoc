@@ -11,17 +11,17 @@ conformance-test:: /conf/ogcapppkg/process-description
 conformance-test:: /conf/ogcapppkg/executionUnit
 ====
 
-[[ats_ogcapppkg-schema]]
+[[ats_ogcapppkg_Schema]]
 ==== Schema
 
 include::ogcapppkg/ATS_schema.adoc[]
 
-[[ats_ogcapppkg-process-description]]
+[[ats_ogcapppkg_Process-Description]]
 ==== Process pescription
 
 include::ogcapppkg/ATS_process-description.adoc[]
 
-[[ats_ogcapppkg-executionUnit]]
+[[ats_ogcapppkg_execution-unit]]
 ==== Execution unit
 
 include::ogcapppkg/ATS_executionUnit.adoc[]
