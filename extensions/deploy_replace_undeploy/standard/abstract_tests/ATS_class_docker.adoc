@@ -13,7 +13,7 @@ conformance-test:: /conf/docker/image-ref
 conformance-test:: /conf/docker/schema
 ====
 
-[[ats_docker-Schema]]
+[[ats_docker_Schema]]
 ==== Schema
 
 include::docker/ATS_schema.adoc[]
