@@ -6,7 +6,7 @@
 identifier:: https://www.opengis.net/spec/ogcapi-processes-2/1.0/req/ogcapppkg
 obligation:: requirement
 subject:: Web API
-inherit:: <<OAProc-1,OGC API - Processes - Part 1: Core>>
+inherit:: https://www.opengis.net/spec/ogcapi-processes-1/2.0/req/core
 inherit:: <<rc_deploy-replace-undeploy,https://www.opengis.net/spec/ogcapi-processes-2/1.0/req/deploy-replace-undeploy>>
 requirement:: /req/ogcapppkg/body
 requirement:: /req/ogcapppkg/schema

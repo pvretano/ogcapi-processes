@@ -6,11 +6,12 @@
 identifier:: https://www.opengis.net/spec/ogcapi-processes-2/1.0/req/deploy-replace-undeploy
 obligation:: requirement
 subject:: Web API
-inherit:: <<OAProc-1,OGC API - Processes - Part 1: Core, Conformance Class 'core'>>
-inherit:: <<OAComm-5,OGC API - Features - Part 4 / OGC API - Common - Part 5: Create, Replace, Update and Delete, Requirements Class "Create/Replace/Delete">>
-inherit:: <<OAComm-5,OGC API - Features - Part 4 / OGC API - Common - Part 5: Create, Replace, Update, Delete, Requirements Class "Optimistic Locking Using Timestamps">>
-inherit:: <<OAComm-5,OGC API - Features - Part 4/OGC API Common - Part 5: Create, Replace, Update, Delete, Requirements Class "Optimistic Locking Using ETags">>
-inherit:: <<OAComm-5,OGC API - Features - Part 4/OGC API Common - Part 5: Create, Replace, Update, Delete, Requirements Class "Handling Preference">>
+inherit:: https://www.opengis.net/spec/ogcapi-processes-1/2.0/req/core
+inherit:: http://www.opengis.net/spec/ogcapi-features-4/1.0/req/create-replace-delete
+inherit:: http://www.opengis.net/spec/ogcapi-common-5/1.0/req/optimistic-locking-timestamps
+inherit:: http://www.opengis.net/spec/ogcapi-common-5/1.0/req/optimistic-locking-etags
+inherit:: http://www.opengis.net/spec/ogcapi-common-5/1.0/req/return-resource-representation-in-response
+inherit:: http://www.opengis.net/spec/ogcapi-common-5/1.0/req/handling
 inherit:: <<rfc2616,RFC 2616 (HTTP/1.1)>>
 inherit:: <<rfc6906,RFC 6906 (The 'profile' Link Relation Type)>>
 
