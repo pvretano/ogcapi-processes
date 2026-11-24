@@ -242,11 +242,9 @@ If the server will process the replace request later, a `202` status code will b
 
 See <<sc_dru_http-status-codes>> for general guidance.
 
-If the request body's media type is not supported by the server, then <<req_deploy-replace-undeploy_deploy-unsupported-media-type,/req/deploy-replace-undeploy/deploy-unsupported-media-type>> applies.
+include::../requirements/deploy-replace-undeploy/replace/REQ_unsupported-media-type.adoc[]
 
 If the process with the specified identifier does not exist on the server, see requirement /req/core/process-exception/no-such-process from <<OAProc-1>>.
-
-If the process exist but is immutable then <<req_deploy-replace-undeploy_response-immutable,/req/deploy-replace-undeploy/response-immutable>> applies.
 
 [[sc_undeploy]]
 === Removing a processes from the API (undeployProcess)

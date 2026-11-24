@@ -6,7 +6,7 @@ identifier:: /req/deploy-replace-undeploy/replace-unsupported-media-type
 
 [.component,class=part]
 --
-If the server does not support the media type of the request body, asserted using the `Content-Type` HTTP header, the server SHALL respond with an HTTP status code `415`.
+If the server does not support the media type of the request body of the replace operation, asserted using the HTTP header `Content-Type`, the server SHALL response with an HTTP status code `415`.
 --
 
 [.component,class=part]
